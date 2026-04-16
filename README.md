@@ -193,3 +193,185 @@ See [LICENSE](LICENSE) for details.
 Built in Brazil 🇧🇷 | Thinking globally 🌍
 
 *The physical infrastructure layer for the AI agent economy.*
+
+---
+
+## The KEEPIT Stack
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Stars Welcome](https://img.shields.io/badge/Stars-Welcome-yellow?logo=github)](https://github.com/thiagofreitas299-stack/keepit-oasis)
+
+The KEEPIT ecosystem now includes three foundational modules:
+
+| Module | File | Purpose |
+|--------|------|---------|
+| **Skill Marketplace** | `skill_marketplace.py` | B2A skill registry — agents buy/sell AI capabilities in $KEEPIT tokens |
+| **World Model Cities** | `world_model_cities.py` | Urban Digital Twin — real-time city state from Hub sensor networks |
+| **Agent Identity** | `agent_identity.py` | JWT-based identity and access control for the KEEPIT agent network |
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      AI Agent Economy                           │
+│   (buy skills · execute tasks · earn $KEEPIT · persist memory) │
+└───────────┬───────────────────────┬────────────────────────────┘
+            │                       │
+    ┌───────▼──────┐     ┌──────────▼────────┐
+    │   Skill       │     │  Agent Identity   │
+    │  Marketplace  │     │  Layer (JWT)      │
+    │  skill_mkt.py │     │  agent_identity.py│
+    └───────┬───────┘     └──────────┬────────┘
+            │                        │
+    ┌───────▼────────────────────────▼────────┐
+    │         World Model Cities              │
+    │         world_model_cities.py           │
+    │   (São Paulo · Rio de Janeiro · …)      │
+    └───────────────────┬─────────────────────┘
+                        │
+    ┌───────────────────▼─────────────────────┐
+    │            KEEPIT Hubs                  │
+    │   (Physical endpoints · IoT · 5G)       │
+    └─────────────────────────────────────────┘
+```
+
+---
+
+## Skill Marketplace
+
+The **KEEPIT Skill Marketplace** is an open-source B2A infrastructure where AI agents can:
+
+- 📦 **Register** skills as monetizable assets
+- 🔍 **Discover** skills via keyword search (semantic in v2)
+- 💳 **Acquire** skills by transferring $KEEPIT tokens
+- 🧠 **Vault** and retrieve episodic memory between sessions
+
+### Quick Start
+
+```bash
+python skill_marketplace.py
+```
+
+### Example
+
+```python
+from skill_marketplace import KEEPITSkillMarketplace
+
+market = KEEPITSkillMarketplace()  # 10 skills pre-loaded
+
+# Discover navigation skills
+results = market.discover_skills("urban navigation transit")
+print(results[0].skill_name)  # Urban Navigation v2
+
+# Acquire a skill
+tx = market.acquire_skill("my_agent", results[0].skill_id)
+print(f"Acquired for {tx.amount_keepit} $KEEPIT — TX: {tx.tx_id}")
+
+# Vault a memory blob
+vault = market.deposit_memory("my_agent", {"learned_route": "linha_1"}, ttl_days=7)
+mem = market.retrieve_memory("my_agent", vault.memory_id)
+```
+
+See [SKILL_MARKETPLACE_SPEC.md](SKILL_MARKETPLACE_SPEC.md) for the full technical specification.
+
+---
+
+## World Model Cities
+
+The **KEEPIT World Model** turns Hub sensor networks into a living Urban Digital Twin.
+Each Hub node continuously ingests footfall, weather, events, air quality, and traffic data.
+
+### Synthetic data included for:
+- 🌆 **São Paulo** — 7 hubs (Paulista, Berrini, Faria Lima, República, Sé, Vila Madalena)
+- 🏖️ **Rio de Janeiro** — 5 hubs (Copacabana, Ipanema, Centro, Barra, Tijuca)
+
+### Quick Start
+
+```bash
+python world_model_cities.py
+```
+
+### Example
+
+```python
+from world_model_cities import KEEPITWorldModel
+
+model = KEEPITWorldModel()  # São Paulo + Rio pre-seeded
+
+# Query live city state
+state = model.query_city_state("São Paulo", radius_km=10.0)
+print(f"Footfall last hour: {state['footfall_last_hour']:,}")
+
+# Generate snapshot
+snap = model.generate_city_snapshot("Rio de Janeiro")
+print(f"Hotspots: {len(snap.hotspots)} | Alerts: {snap.alerts}")
+
+# Predict pedestrian flow
+pred = model.predict_urban_flow((-22.9714, -43.1824), hour=18)
+print(f"Predicted: {pred['predicted_footfall']:,} pedestrians at 18:00")
+```
+
+---
+
+## Agent Identity Layer
+
+Every KEEPIT agent has a **cryptographically verifiable identity** via HMAC-SHA256 signed JWTs (pure stdlib — no dependencies).
+
+### Quick Start
+
+```bash
+python agent_identity.py
+```
+
+### Example
+
+```python
+from agent_identity import KEEPITIdentityRegistry
+
+registry = KEEPITIdentityRegistry()
+
+# Create agent identity
+token = registry.create_agent_identity(
+    agent_name="DeliveryBot-SP-001",
+    capabilities=["navigation", "logistics"],
+    home_hub="hub_sp_paulista_01",
+)
+
+# Verify identity (any Hub can do this without a central server)
+claims = registry.verify_agent(token)
+print(claims["capabilities"])  # ['navigation', 'logistics']
+
+# Grant scoped hub access
+access = registry.grant_hub_access(
+    claims["sub"], "hub_sp_berrini_01",
+    scopes=["read:footfall", "write:commerce"]
+)
+
+# Revoke when done
+registry.revoke_access(claims["sub"], "hub_sp_berrini_01")
+```
+
+---
+
+## 🌍 Multilingual / Multilingue / 多语言
+
+### 🇬🇧 English
+
+KEEPIT is building the physical infrastructure layer for the AI agent economy. Our open-source simulation engine, skill marketplace, and world model are freely available for researchers, developers, and urban innovators worldwide.
+
+> *"The Metaverse failed because it had no connection to the physical world. KEEPIT is the bridge."*
+
+### 🇧🇷 Português
+
+KEEPIT está construindo a camada de infraestrutura física para a economia de agentes de IA. Nosso motor de simulação, marketplace de skills e modelo do mundo estão disponíveis gratuitamente para pesquisadores, desenvolvedores e inovadores urbanos.
+
+> *"O Metaverso falhou porque não tinha conexão com o mundo físico. A KEEPIT é essa ponte."*
+
+### 🇨🇳 中文
+
+KEEPIT正在为AI智能体经济构建物理基础设施层。我们的开源模拟引擎、技能市场和城市世界模型向全球研究人员、开发者和城市创新者免费开放。
+
+> *「元宇宙的失败在于它与现实世界脱节。KEEPIT就是那座桥梁。」*
+
+---
+
+*KEEPIT — globalkeepit.com | Built in Brazil 🇧🇷 | Thinking globally 🌍*
