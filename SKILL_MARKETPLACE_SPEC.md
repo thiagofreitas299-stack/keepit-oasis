@@ -7,6 +7,91 @@
 
 ---
 
+## The Anti-Hallucination Case
+
+> **27% of LLM responses in production contain factual errors.**  
+> The KEEPIT Skill Marketplace is not just a capability exchange — it is the trust infrastructure that makes AI agent deployments safe for enterprise use.
+
+AI agents are powerful but unreliable. They hallucinate facts, cite non-existent sources, and confabulate plausible-sounding but wrong information. This is not a model flaw that fine-tuning alone can fix — it is a **grounding problem**. Agents lack access to a real-time, verified, physically-anchored source of truth.
+
+**KEEPIT Hubs are that source of truth.**
+
+Every KEEPIT Hub is a physical node in the real world — installed in cities, businesses, and institutions — continuously collecting, verifying, and serving factual data. When an AI agent queries a Hub before responding, it is grounding its output in **real-world-verified information that no purely digital system can replicate**.
+
+### How the KEEPIT Hub Solves Hallucination
+
+#### 1. Grounding Layer — Verified Facts from Physical Hubs
+
+Each physical KEEPIT Hub maintains a curated `Verified Memory Vault`: a store of facts that have been verified against local registries, on-site IoT sensors, and authoritative sources. Before an agent responds to a query:
+
+```
+Agent receives query
+    ↓
+Agent calls KEEPIT ground_response(agent_id, query, draft_response)
+    ↓
+KEEPIT Hub searches Verified Memory Vault
+    ↓
+Returns: { grounded: bool, confidence: 0–1, corrections: [], sources: [] }
+    ↓
+Agent emits verified response — or flags uncertainty
+```
+
+This single call dramatically reduces hallucination risk by anchoring the agent to verified, sourced facts rather than parametric memory.
+
+#### 2. Memory Vault — Episodic Verified Memory
+
+The Memory Vault stores not just facts, but **episodic verified records**: timestamped, sourced, hub-attributed entries that form a living world model. Unlike RAG databases built from web crawls, Memory Vault entries are:
+
+- **Physically verified** — confirmed by on-site Hub sensors or certified local registries
+- **Attributed** — every fact carries a `hub_id`, `source`, and `registered_at` timestamp
+- **Updateable** — Hubs push corrections when real-world conditions change
+- **Auditable** — full provenance chain from physical world to agent response
+
+Agents that use Memory Vault facts carry a measurable **trust score** visible in the Marketplace, rewarding reliable, well-grounded agents with lower grounding fees.
+
+#### 3. Skill Registry — Tested and Certified Capabilities
+
+Skills on the KEEPIT Marketplace are not merely uploaded — they are **tested and certified** before listing:
+
+| Tier | Certification Level | Hallucination Guarantee |
+|------|--------------------|--------------------------|
+| Community | Peer reviewed | Basic — community-flagged errors removed |
+| Standard | Hub-verified | Grounded in local Hub data |
+| Premium | Physical real-time | Live grounding against physical sensor data |
+
+A skill that executes a financial calculation is certified against verified economic data from Hub nodes. A skill that reports local regulations is certified against the physical Hub's registry integration. **Certification is not a checkbox — it is a continuous grounding contract.**
+
+#### 4. Agent Output Moderation Pipeline
+
+Before any agent response reaches an end user in a KEEPIT-integrated deployment, it passes through the moderation pipeline:
+
+```
+Agent draft output
+    ↓
+moderate_agent_output(agent_id, output, strict=False)
+    ↓
+[approved]  → output delivered to user (with source attribution)
+[blocked]   → agent re-queries Hub or flags response as unverified
+```
+
+In **strict mode** (enterprise deployments), any response with a hallucination probability > 0.3 is blocked. In **standard mode**, the threshold is 0.7. Enterprises can configure per-agent, per-category thresholds.
+
+### The Business Case
+
+| Problem | Current Solution | KEEPIT Solution |
+|---------|-----------------|------------------|
+| Agent gives wrong facts | Fine-tune (expensive, static) | Ground against live Hub data |
+| RAG returns outdated data | Re-crawl (costly, slow) | Physical Hub auto-updates |
+| No audit trail | Log prompts/responses | Full provenance from Hub to output |
+| Agents can't be trusted in enterprise | Human review (slow, costly) | Automated moderation pipeline |
+
+Enterprise customers pay a **grounding fee in $KEEPIT tokens** per moderated response — not for the model, not for the compute, but for the **trust**. This is the B2A economy.
+
+> *"The agent that doesn't hallucinate wins."*  
+> — KEEPIT Anti-Hallucination Whitepaper, 2024
+
+---
+
 ## Overview
 
 The KEEPIT Skill Marketplace is the **B2A (Business-to-Agent) commerce layer** for tradeable AI capabilities. It enables:

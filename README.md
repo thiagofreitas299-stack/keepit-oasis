@@ -8,6 +8,21 @@
 
 ---
 
+## 🧠 Solving AI Agent Hallucination
+
+> **27% of LLM responses in production contain factual errors.**  
+> KEEPIT Hubs are the grounding infrastructure that fixes this.
+
+KEEPIT acts as a **verified memory layer** between AI agents and the real world:
+- Agents query KEEPIT before responding → responses grounded in verified facts
+- Physical Hubs continuously update verified local knowledge
+- Skills in the marketplace are tested and certified — not just uploaded
+- Three tiers: Free (community) · Standard (hub-verified) · Premium (real-time physical)
+
+**Result:** AI agents that businesses can actually trust.
+
+---
+
 ## What is KEEPIT OASIS?
 
 KEEPIT OASIS is an open-source framework that bridges **AI agents, World Models, and the physical world**.
