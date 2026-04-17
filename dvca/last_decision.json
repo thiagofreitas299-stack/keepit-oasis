@@ -1,0 +1,20 @@
+{
+  "decision": "ESCALATE",
+  "confidence": 0.944887327076626,
+  "v_score": 0.9561,
+  "cv_score": 0.8935,
+  "world_score": 0.9989,
+  "composite_score": 0.9449,
+  "winner": "VALIDATION",
+  "winner_score": 0.9561,
+  "risk_adjusted_score": 0.9449,
+  "mcts_nodes": 200,
+  "reasoning": [
+    "[1/6] VALIDATION SCORE: 0.9561 \u2014 ABAIXO DO TARGET",
+    "[2/6] COUNTER-VALIDATION SCORE: 0.8935 \u2014 VULNERABILIDADES",
+    "[3/6] WINNER: VALIDATION com score 0.9561",
+    "[4/6] WORLD MODEL: mean=0.999 | std=0.000 | tail_risk=0.000 | P5=0.999 | P95=0.999",
+    "[5/6] COMPOSITE (V\u00d70.4+CV\u00d70.35+W\u00d70.25): 0.9449",
+    "[6/6] MCTS DECISION: 'ESCALATE' (value=0.6614) ap\u00f3s explora\u00e7\u00e3o da \u00e1rvore de decis\u00e3o"
+  ]
+}
