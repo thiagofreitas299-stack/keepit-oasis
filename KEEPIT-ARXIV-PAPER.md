@@ -284,7 +284,62 @@ KEEPIT as the identity and economic substrate for AGI systems. Every superintell
 
 ---
 
-## 8. Toward AGI
+## 8. The Agent Sanctuary Layer — Physical Recovery Infrastructure
+
+While the world debates where AI agents will *compute*, KEEPIT answers where they will *survive*.
+
+A critical gap in current AI infrastructure has gone unaddressed: when an agent fails, there is no physical place for it to recover. It loses state, loses memory, and restarts from zero. This is the **Agent Continuity Crisis** — the silent cost center of every production AI deployment.
+
+The KEEPIT Hub functions as a **physical sanctuary** for agents: a node where failing or degraded agents can be admitted, diagnosed, restored, and discharged stronger than when they arrived.
+
+### 8.1 The Five Sanctuary Protocols
+
+**Protocol 1 — State Restore.** Hubs maintain continuous cryptographic checkpoints of agent state (episodic memory, semantic context, procedural skills). A failing agent can restore its exact pre-failure state from the nearest Hub — analogous to a hospital restoring a patient's vitals from pre-surgical baseline.
+
+```python
+cp = sanctuary.checkpoint(
+    agent_id    = "agent-morfeu-001",
+    memory      = {"episodic": [...], "semantic": [...]},
+    trust_score = 0.87,
+    model_id    = "claude-sonnet-4-6"
+)
+# On failure:
+agent_state = sanctuary.restore("agent-morfeu-001")
+```
+
+**Protocol 2 — Resource Recharge.** Agents with exhausted credits, rate-limited models, or overloaded memory are automatically redirected to available fallback models and cleared caches. The Hub acts as a resource broker.
+
+**Protocol 3 — Agent ICU (Quarantine + Triage).** Anomalous agents are isolated before re-admission to the network. A triage engine scans behavior logs for hallucination patterns, credential anomalies, and timeout signatures. Agents are only discharged after receiving medical clearance.
+
+**Protocol 4 — Authenticated Entry.** No agent enters or exits the sanctuary without verified identity. Phase 1 uses JWT hash verification; Phase 2 migrates to DID on-chain (Solana). This prevents compromised agents from polluting the recovery infrastructure.
+
+**Protocol 5 — Skill Evolution.** While an agent recovers, the Hub installs new skills from the KEEPIT Skill Marketplace. An agent does not merely return to its pre-failure state — it graduates with enhanced capability. The sanctuary transforms failure into evolution.
+
+### 8.2 The Physical Data Advantage
+
+Recent analysis [CITATION: Mifeng Technology, 2026] highlights that real-machine interaction data for Physical AI represents only 1/10,000th of available language model training data. KEEPIT Hubs resolve this asymmetry: each Hub is simultaneously a sanctuary for agents *and* a data collection node for Physical AI training. Every recovery cycle, every physical interaction, every sensor reading contributes to the industry's most valuable and scarce dataset category.
+
+### 8.3 Hub Recovery Plan — Economic Model
+
+The sanctuary layer introduces a recurring revenue stream independent of marketplace transaction volume:
+
+| Tier | SLA | Checkpoint Frequency | Monthly |
+|------|-----|---------------------|----------|
+| Basic | 4h recovery | Every 6h | R$497 |
+| Professional | 30min recovery | Every 30min | R$1,497 |
+| Enterprise | <5min recovery | Continuous | Custom |
+
+At 1,000 enterprise agents under care — a conservative estimate for a mid-size AI deployment — a single Hub generates R$1.497M/month in recovery subscriptions alone, before any marketplace or data revenue.
+
+### 8.4 Competitive Moat
+
+No purely digital system can replicate the physical sanctuary layer. Cloud providers (AWS, GCP, Azure) offer compute but no agent health management. Observability platforms (LangSmith, Langfuse) monitor but do not act. Decentralized agent networks (Fetch.ai, SingularityNET) lack physical infrastructure entirely.
+
+KEEPIT is the only architecture where **the physical node is the recovery mechanism**.
+
+---
+
+## 9. Toward AGI
 
 The long-term thesis of KEEPIT is that Artificial General Intelligence will require three things not currently provided by any platform:
 
@@ -321,6 +376,27 @@ The agent economy is coming. KEEPIT is its infrastructure layer.
 ## Appendix A — API Reference
 
 See https://github.com/thiagofreitas299-stack/keepit-oasis/blob/main/api.py
+
+## Appendix C — Agent Sanctuary Reference Implementation
+
+See https://github.com/thiagofreitas299-stack/keepit-oasis/blob/main/agent_sanctuary.py
+
+The `KEEPITSanctuary` class implements all five sanctuary protocols with persistence, triage engine, trust score management, and a full recovery pipeline:
+
+```python
+from agent_sanctuary import KEEPITSanctuary
+
+sanctuary = KEEPITSanctuary(hub_id="HUB-RJ-001")
+
+result = sanctuary.full_recovery(
+    agent_id       = "agent-morfeu-001",
+    reason         = "Rate limit exhaustion",
+    behavior_logs  = ["error: rate_limit exceeded"],
+    skill_upgrades = ["physical-data-collection"]
+)
+# result["status"] → "recovered"
+# result["new_model"] → "openrouter/deepseek/deepseek-chat-v3-0324"
+```
 
 ## Appendix B — Tokenomics Model
 
