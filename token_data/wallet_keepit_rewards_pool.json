@@ -1,0 +1,11 @@
+{
+  "holder_id": "keepit:rewards:pool",
+  "holder_type": "rewards_pool",
+  "balance": 249997000.0,
+  "total_earned": 0.0,
+  "total_spent": 3000.0,
+  "total_burned": 0.0,
+  "tx_count": 3,
+  "created_at": 1776523158.7816877,
+  "address": ""
+}

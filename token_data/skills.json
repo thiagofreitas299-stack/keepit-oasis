@@ -1,0 +1,14 @@
+{
+  "skill:agent-morfeu-001:6dac9733": {
+    "skill_id": "skill:agent-morfeu-001:6dac9733",
+    "seller_id": "agent-morfeu-001",
+    "name": "Hub Sensor Interface v1",
+    "description": "Habilidade de coletar e processar dados de sensores f\u00edsicos KEEPIT Hub. Gerada em HUB-RJ-001.",
+    "price_keepit": 250.0,
+    "category": "physical",
+    "trust_score": 0.92,
+    "sold_count": 1,
+    "listed_at": 1776523158.7834513,
+    "active": true
+  }
+}

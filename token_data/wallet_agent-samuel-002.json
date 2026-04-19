@@ -1,0 +1,11 @@
+{
+  "holder_id": "agent-samuel-002",
+  "holder_type": "agent",
+  "balance": 1000.0,
+  "total_earned": 1000.0,
+  "total_spent": 0.0,
+  "total_burned": 0.0,
+  "tx_count": 1,
+  "created_at": 1776523158.7826235,
+  "address": "KEEPITACF00553A2FE8C98E6EDF8E8022A9B9B"
+}
