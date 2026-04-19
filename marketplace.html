@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEEPIT Marketplace — Hubs nas Ruas do Brasil</title>
+<meta name="description" content="Os Hubs KEEPIT estão nas principais ruas do Brasil. Guarde seus pertences com segurança enquanto aproveita a cidade.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#e8e8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;min-height:100vh}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);border-bottom:1px solid rgba(74,255,124,0.12);padding:16px 48px;display:flex;align-items:center;gap:24px}
+.nav-logo{font-size:20px;font-weight:900;letter-spacing:3px;color:#fff;text-decoration:none}
+.nav-logo span{color:#00CC6A}
+.nav-back{color:#00CC6A;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-left:auto}
+.nav-back:hover{text-decoration:underline}
+.hero{padding:140px 48px 80px;text-align:center;max-width:900px;margin:0 auto}
+.badge{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#00CC6A;margin-bottom:16px}
+h1{font-size:clamp(36px,6vw,72px);font-weight:900;line-height:1.08;letter-spacing:-2px;margin-bottom:24px}
+h1 span{color:#00CC6A}
+.subtitle{font-size:18px;color:rgba(232,232,232,0.6);line-height:1.65;max-width:640px;margin:0 auto 48px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1280px;margin:0 auto;padding:0 48px 80px}
+@media(max-width:768px){.gallery{grid-template-columns:1fr;padding:0 20px 60px}.hero{padding:120px 20px 60px}}
+.card{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(74,255,124,0.15);box-shadow:0 0 40px rgba(74,255,124,0.08),0 30px 60px rgba(0,0,0,0.5);aspect-ratio:16/10;cursor:pointer;transition:all .4s}
+.card:hover{border-color:rgba(74,255,124,0.4);box-shadow:0 0 60px rgba(74,255,124,0.2),0 40px 80px rgba(0,0,0,0.6);transform:translateY(-6px)}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card:hover img{transform:scale(1.04)}
+.card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.1) 60%,transparent 100%)}
+.card-caption{position:absolute;bottom:0;left:0;right:0;padding:24px}
+.card-location{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#00CC6A;margin-bottom:6px}
+.card-title{font-size:18px;font-weight:800;color:#fff}
+.card:first-child{grid-column:1 / -1;aspect-ratio:21/9}
+@media(max-width:768px){.card:first-child{grid-column:1;aspect-ratio:16/10}}
+.section-title{text-align:center;padding:0 48px 40px;font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff}
+.section-title span{color:#00CC6A}
+.cta{text-align:center;padding:40px 48px 80px}
+.btn{display:inline-block;padding:18px 48px;background:#00CC6A;color:#000;font-size:14px;font-weight:900;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .3s}
+.btn:hover{background:#00ff88;transform:translateY(-2px)}
+.btn-s{display:inline-block;margin-left:16px;padding:18px 32px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.25);font-size:14px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .3s}
+.btn-s:hover{border-color:#00CC6A;color:#00CC6A}
+footer{border-top:1px solid rgba(74,255,124,0.1);padding:32px 48px;text-align:center;font-size:13px;color:#555}
+footer a{color:#00CC6A;text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.97);border-bottom:1px solid rgba(74,255,124,0.12);padding:14px 40px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+  <a href="/" style="font-size:18px;font-weight:900;letter-spacing:3px;color:#fff;text-decoration:none">KEEP<span style="color:#00CC6A">IT</span></a>
+  <div style="display:flex;gap:20px;align-items:center;margin-left:auto;flex-wrap:wrap">
+    <a href="/marketplace.html" style="color:#00CC6A;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid #00CC6A;padding-bottom:2px">Marketplace</a>
+    <a href="/token.html" style="color:#7C5CFF;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">$KEEPIT</a>
+    <a href="/bank.html" style="color:#aaa;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">Bank</a>
+    <a href="/investors.html" style="color:#FFD166;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">Investors</a>
+    <a href="/#espera" style="background:#00CC6A;color:#000;padding:8px 18px;border-radius:3px;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none">Lista de Espera →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="badge">🟢 &nbsp; Hubs Físicos · Brasil · 2026</p>
+  <h1>O Hub KEEPIT<br><span>nas ruas do Brasil</span></h1>
+  <p class="subtitle">Guarde seus pertences com segurança enquanto aproveita a cidade. Tecnologia de agentes de IA protegendo o que você carrega — de Ipanema ao Cristo Redentor.</p>
+</div>
+
+<h2 class="section-title">Onde estamos → <span>onde vamos</span></h2>
+
+<div class="gallery">
+
+  <!-- Imagem 1 — Destaque (Paulista) -->
+  <div class="card">
+    <img src="mkt-1-paulista.jpg" alt="Hub KEEPIT na Avenida Paulista — São Paulo" loading="lazy">
+    <div class="card-overlay"></div>
+    <div class="card-caption">
+      <p class="card-location">📍 Avenida Paulista · São Paulo</p>
+      <p class="card-title">SP: Keep Your Gear Safe. Hub Lockers.</p>
+    </div>
+  </div>
+
+  <!-- Imagem 2 — Ipanema Surf -->
+  <div class="card">
+    <img src="mkt-2-ipanema-surf.jpg" alt="Hub KEEPIT em Ipanema — Rio de Janeiro" loading="lazy">
+    <div class="card-overlay"></div>
+    <div class="card-caption">
+      <p class="card-location">📍 Praia de Ipanema · Rio de Janeiro</p>
+      <p class="card-title">Guarde e surfe sem preocupação.</p>
+    </div>
+  </div>
+
+  <!-- Imagem 3 — Cristo -->
+  <div class="card">
+    <img src="mkt-3-cristo.jpg" alt="Hub KEEPIT no Cristo Redentor — Rio de Janeiro" loading="lazy">
+    <div class="card-overlay"></div>
+    <div class="card-caption">
+      <p class="card-location">📍 Cristo Redentor · Rio de Janeiro</p>
+      <p class="card-title">RIO: Keep Your Gear Safe. Hub Lockers.</p>
+    </div>
+  </div>
+
+  <!-- Imagem 4 — Ipanema Táxi -->
+  <div class="card">
+    <img src="mkt-4-ipanema-taxi.jpg" alt="Hub KEEPIT no Calçadão de Ipanema" loading="lazy">
+    <div class="card-overlay"></div>
+    <div class="card-caption">
+      <p class="card-location">📍 Calçadão de Ipanema · Rio de Janeiro</p>
+      <p class="card-title">Na orla carioca, seu guarda-volumes inteligente.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- COMO FUNCIONA -->
+<section style="max-width:1100px;margin:0 auto;padding:0 48px 80px">
+
+  <!-- Visão KEEPIT — Hub de Serviços da Cidade -->
+  <div style="margin-bottom:64px">
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#00CC6A;margin-bottom:12px;text-align:center">🏙️ A visão completa</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);font-weight:900;text-align:center;margin-bottom:16px;color:#fff">Não somos um locker.<br><span style="color:#00CC6A">Somos o Hub da cidade.</span></h2>
+    <p style="text-align:center;font-size:17px;color:rgba(232,232,232,0.6);max-width:680px;margin:0 auto 48px;line-height:1.7">O KEEPIT é um <strong style="color:#fff">integrador de serviços urbanos</strong> — um totem de autoatendimento interativo que transforma qualquer ponto da cidade em um polo de soluções multichannel, hiper-localizado e movido por IA de borda.</p>
+
+    <!-- Use cases grid -->
+    <div style="background:rgba(10,10,20,0.8);border:1px solid rgba(74,255,124,0.15);border-radius:20px;padding:40px;margin-bottom:40px">
+      <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#00CC6A;margin-bottom:24px">No KEEPIT mais próximo de você:</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">🚗</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Peça um Uber</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Chame direto no Hub — sem celular, sem app</p>
+        </div>
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">🏠</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Reserve um quarto</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Airbnb, hotéis e pousadas locais integrados</p>
+        </div>
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">🍔</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Peça um lanche</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">iFood, restaurantes locais — retire na hora</p>
+        </div>
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">👕</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Compre uma camisa</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Loja local integrada — retire no Hub em minutos</p>
+        </div>
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">🎫</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Retire um ingresso</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Shows, jogos, eventos — QR code impresso no Hub</p>
+        </div>
+        <div style="background:rgba(74,255,124,0.05);border-radius:12px;padding:20px;border-left:3px solid #00CC6A">
+          <div style="font-size:28px;margin-bottom:8px">📦</div>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px">Retire compras</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Amazon, Shopee, Mercado Livre — ponto de retirada 24h</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 pilares -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div style="background:rgba(74,255,124,0.04);border:1px solid rgba(74,255,124,0.12);border-radius:16px;padding:32px">
+        <div style="font-size:36px;margin-bottom:16px">🏪</div>
+        <h3 style="font-size:17px;font-weight:800;color:#fff;margin-bottom:10px">Para o Comércio Local</h3>
+        <p style="font-size:13px;color:rgba(232,232,232,0.6);line-height:1.65">Expansão comercial de <strong style="color:#fff">baixo custo</strong>. A loja tem presença física na rua sem pagar aluguel de ponto. O Hub entrega por ela.</p>
+      </div>
+      <div style="background:rgba(74,255,124,0.04);border:1px solid rgba(74,255,124,0.12);border-radius:16px;padding:32px">
+        <div style="font-size:36px;margin-bottom:16px">🌆</div>
+        <h3 style="font-size:17px;font-weight:800;color:#fff;margin-bottom:10px">Para a Cidade</h3>
+        <p style="font-size:13px;color:rgba(232,232,232,0.6);line-height:1.65"><strong style="color:#fff">Utilidade pública de alto impacto.</strong> Serviços essenciais a um clique em qualquer bairro. IA de borda resolvendo problemas urbanos reais.</p>
+      </div>
+      <div style="background:rgba(74,255,124,0.04);border:1px solid rgba(74,255,124,0.12);border-radius:16px;padding:32px">
+        <div style="font-size:36px;margin-bottom:16px">🤖</div>
+        <h3 style="font-size:17px;font-weight:800;color:#fff;margin-bottom:10px">Para os Agentes de IA</h3>
+        <p style="font-size:13px;color:rgba(232,232,232,0.6);line-height:1.65">O Hub físico <strong style="color:#fff">descentralizado</strong> é o corpo onde os agentes existem. Cada Hub = um portal entre o ciberespaço e o mundo real.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="height:1px;background:linear-gradient(to right,transparent,rgba(74,255,124,0.3),transparent);margin-bottom:64px"></div>
+
+  <!-- B2A Marketplace -->
+  <div>
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#00CC6A;margin-bottom:12px;text-align:center">🤖 B2A — Business to Agent</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);font-weight:900;text-align:center;margin-bottom:16px;color:#fff">Agentes que <span style="color:#00CC6A">compram e vendem</span> entre si</h2>
+    <p style="text-align:center;font-size:17px;color:rgba(232,232,232,0.6);max-width:640px;margin:0 auto 48px;line-height:1.65">O Hub físico gera dados únicos do mundo real. Esses dados viram <strong style="color:#fff">skills raras</strong> que agentes compram uns dos outros no ciberespaço — em $KEEPIT.</p>
+
+    <div style="background:rgba(10,10,30,0.8);border:1px solid rgba(74,255,124,0.2);border-radius:20px;padding:40px">
+      
+      <!-- Fluxo -->
+      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:16px;align-items:center;margin-bottom:40px">
+        
+        <div style="text-align:center;background:rgba(74,255,124,0.08);border-radius:12px;padding:24px">
+          <div style="font-size:28px;margin-bottom:8px">🏗️</div>
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">Hub Físico</p>
+          <p style="font-size:11px;color:rgba(232,232,232,0.5)">Gera dados reais do mundo</p>
+        </div>
+        
+        <div style="color:#00CC6A;font-size:20px;font-weight:900">→</div>
+        
+        <div style="text-align:center;background:rgba(74,255,124,0.08);border-radius:12px;padding:24px">
+          <div style="font-size:28px;margin-bottom:8px">🧠</div>
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">Agente KEEPIT</p>
+          <p style="font-size:11px;color:rgba(232,232,232,0.5)">Transforma em skill rara</p>
+        </div>
+        
+        <div style="color:#00CC6A;font-size:20px;font-weight:900">→</div>
+        
+        <div style="text-align:center;background:rgba(74,255,124,0.08);border-radius:12px;padding:24px">
+          <div style="font-size:28px;margin-bottom:8px">💰</div>
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">Marketplace B2A</p>
+          <p style="font-size:11px;color:rgba(232,232,232,0.5)">Vendida em $KEEPIT</p>
+        </div>
+
+      </div>
+
+      <!-- Exemplos -->
+      <h3 style="font-size:15px;font-weight:700;color:#00CC6A;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">Exemplos reais:</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        
+        <div style="background:rgba(255,255,255,0.03);border-radius:10px;padding:18px;border-left:3px solid #00CC6A">
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:6px">🏖️ Hub Ipanema → Skill "Comportamento turista carioca"</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Agente de viagem compra por 50 $KEEPIT para personalizar roteiros</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:10px;padding:18px;border-left:3px solid #00CC6A">
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:6px">💼 Hub Paulista → Skill "Padrão executivo SP"</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Agente financeiro compra por 120 $KEEPIT para análise de perfil</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:10px;padding:18px;border-left:3px solid #00CC6A">
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:6px">✝️ Hub Cristo → Memória "Turismo espiritual RJ"</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Rara. Leiloada entre agentes por 500+ $KEEPIT</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03);border-radius:10px;padding:18px;border-left:3px solid #00CC6A">
+          <p style="font-size:13px;font-weight:700;color:#fff;margin-bottom:6px">🤖 Agente A → vende feature para Agente B</p>
+          <p style="font-size:12px;color:rgba(232,232,232,0.5)">Peer-to-peer. Sem intermediário. Tudo em $KEEPIT na Solana</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="cta">
+  <a href="/#espera" class="btn">Entrar na Lista de Espera →</a>
+  <a href="/" class="btn-s">Ver o Projeto Completo</a>
+</div>
+
+<footer>
+  <p>© 2026 KEEPIT · <a href="/">keepithub.com</a> · O primeiro marketplace B2A do mundo</p>
+</footer>
+
+</body>
+</html>

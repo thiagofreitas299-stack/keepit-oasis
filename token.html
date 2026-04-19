@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$KEEPIT Token — Early Holder · Ecossistema · Solana</title>
+<meta name="description" content="$KEEPIT é o token nativo da economia de agentes de IA. Supply máximo: 21.000.000 (7³). DePIN na Solana. Seja um Early Holder antes do lançamento oficial.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#00CC6A;--green-glow:rgba(74,255,124,0.35);--bg:#0a0a0a;--purple:#7C5CFF}
+body{background:var(--bg);color:#e8e8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;min-height:100vh}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.95);border-bottom:1px solid rgba(74,255,124,0.12);padding:16px 48px;display:flex;align-items:center;gap:24px}
+@media(max-width:768px){nav{padding:12px 20px}}
+.nav-logo{font-size:20px;font-weight:900;letter-spacing:3px;color:#fff;text-decoration:none}
+.nav-logo span{color:var(--green)}
+.nav-back{color:var(--green);text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-left:auto}
+
+/* HERO */
+.hero{padding:140px 48px 80px;text-align:center;max-width:860px;margin:0 auto;position:relative}
+@media(max-width:768px){.hero{padding:120px 20px 60px}}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--purple);margin-bottom:20px;border:1px solid rgba(124,92,255,0.3);border-radius:20px;padding:6px 16px;background:rgba(124,92,255,0.08)}
+h1{font-size:clamp(42px,7vw,88px);font-weight:900;line-height:1.05;letter-spacing:-3px;margin-bottom:24px}
+h1 .purple{color:var(--purple)}
+h1 .green{color:var(--green)}
+.subtitle{font-size:19px;color:rgba(232,232,232,0.6);line-height:1.7;max-width:620px;margin:0 auto 48px}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-purple{display:inline-block;padding:18px 40px;background:var(--purple);color:#fff;font-size:14px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .3s;box-shadow:0 0 24px rgba(124,92,255,0.4)}
+.btn-purple:hover{background:#8f72ff;transform:translateY(-2px)}
+.btn-outline{display:inline-block;padding:18px 32px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.2);font-size:14px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .3s}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+
+/* COIN */
+.coin-section{max-width:1100px;margin:0 auto;padding:0 48px 80px}
+@media(max-width:768px){.coin-section{padding:0 20px 60px}}
+.section-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.section-h2{font-size:clamp(28px,4vw,52px);font-weight:900;margin-bottom:48px;color:#fff}
+.section-h2 span{color:var(--green)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:64px}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.stats{grid-template-columns:1fr}}
+.stat-card{background:rgba(124,92,255,0.07);border:1px solid rgba(124,92,255,0.2);border-radius:16px;padding:28px;text-align:center}
+.stat-val{font-size:clamp(22px,3vw,36px);font-weight:900;color:var(--purple);margin-bottom:6px}
+.stat-lbl{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(232,232,232,0.5)}
+.stat-note{font-size:11px;color:rgba(232,232,232,0.35);margin-top:4px}
+
+/* Tokenomics */
+.tokenomics{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px}
+@media(max-width:768px){.tokenomics{grid-template-columns:1fr}}
+.token-card{background:rgba(10,10,30,0.6);border:1px solid rgba(74,255,124,0.12);border-radius:16px;padding:32px}
+.token-card h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.token-item{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:14px}
+.token-item:last-child{border-bottom:none}
+.token-item-lbl{color:rgba(232,232,232,0.6)}
+.token-item-val{color:#fff;font-weight:700}
+.token-item-val.green{color:var(--green)}
+.token-item-val.purple{color:var(--purple)}
+
+/* Early Holder */
+.early-section{background:linear-gradient(135deg,rgba(124,92,255,0.08),rgba(74,255,124,0.04));border:1px solid rgba(124,92,255,0.25);border-radius:24px;padding:48px;margin-bottom:64px}
+.early-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
+@media(max-width:768px){.early-grid{grid-template-columns:1fr}}
+.perk{background:rgba(0,0,0,0.3);border-radius:12px;padding:24px;border-left:3px solid var(--purple)}
+.perk-ico{font-size:28px;margin-bottom:12px}
+.perk-ttl{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+.perk-dsc{font-size:13px;color:rgba(232,232,232,0.55);line-height:1.6}
+
+/* Ecosystem */
+.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:64px}
+@media(max-width:768px){.eco-grid{grid-template-columns:1fr}}
+.eco-card{background:rgba(74,255,124,0.03);border:1px solid rgba(74,255,124,0.1);border-radius:16px;padding:28px;transition:all .3s}
+.eco-card:hover{border-color:rgba(74,255,124,0.3);background:rgba(74,255,124,0.06)}
+.eco-ico{font-size:32px;margin-bottom:14px}
+.eco-ttl{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px}
+.eco-dsc{font-size:13px;color:rgba(232,232,232,0.55);line-height:1.6}
+
+/* Phases */
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px}
+@media(max-width:900px){.phases{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.phases{grid-template-columns:1fr}}
+.phase{border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.08);position:relative}
+.phase.active{border-color:var(--green);background:rgba(74,255,124,0.05)}
+.phase-num{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(232,232,232,0.4);margin-bottom:8px}
+.phase-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:8px}
+.phase-dsc{font-size:12px;color:rgba(232,232,232,0.5);line-height:1.6}
+.phase-badge{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-top:12px}
+.phase-badge.now{background:rgba(74,255,124,0.15);color:var(--green);border:1px solid rgba(74,255,124,0.3)}
+.phase-badge.soon{background:rgba(255,209,102,0.1);color:#FFD166;border:1px solid rgba(255,209,102,0.3)}
+.phase-badge.future{background:rgba(255,255,255,0.05);color:rgba(232,232,232,0.4);border:1px solid rgba(255,255,255,0.1)}
+
+/* CTA final */
+.cta-final{background:linear-gradient(135deg,rgba(124,92,255,0.12),rgba(74,255,124,0.06));border:1px solid rgba(124,92,255,0.25);border-radius:24px;padding:64px 48px;text-align:center;margin-bottom:80px}
+@media(max-width:768px){.cta-final{padding:40px 24px}}
+.cta-final h2{font-size:clamp(28px,4vw,52px);font-weight:900;margin-bottom:16px;color:#fff}
+.cta-final p{font-size:17px;color:rgba(232,232,232,0.6);max-width:540px;margin:0 auto 40px;line-height:1.7}
+
+footer{border-top:1px solid rgba(74,255,124,0.08);padding:32px 48px;text-align:center;font-size:13px;color:#555}
+footer a{color:var(--green);text-decoration:none}
+
+/* Divider */
+.divider{height:1px;background:linear-gradient(to right,transparent,rgba(74,255,124,0.25),transparent);margin:64px 0}
+</style>
+</head>
+<body>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.97);border-bottom:1px solid rgba(74,255,124,0.12);padding:14px 40px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+  <a href="/" style="font-size:18px;font-weight:900;letter-spacing:3px;color:#fff;text-decoration:none">KEEP<span style="color:#00CC6A">IT</span></a>
+  <div style="display:flex;gap:20px;align-items:center;margin-left:auto;flex-wrap:wrap">
+    <a href="/marketplace.html" style="color:#00CC6A;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">Marketplace</a>
+    <a href="/token.html" style="color:#7C5CFF;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid #7C5CFF;padding-bottom:2px">$KEEPIT</a>
+    <a href="/bank.html" style="color:#aaa;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">Bank</a>
+    <a href="/investors.html" style="color:#FFD166;text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase">Investors</a>
+    <a href="/#espera" style="background:#00CC6A;color:#000;padding:8px 18px;border-radius:3px;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none">Lista de Espera →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="badge">🪙 $KEEPIT · Solana · DePIN</p>
+  <h1>O token da<br><span class="purple">economia</span><br><span class="green">de agentes</span></h1>
+  <p class="subtitle">$KEEPIT é a moeda nativa do primeiro marketplace B2A do mundo. Supply máximo: 21.000.000 — como o Bitcoin. Lastreado em Hubs físicos reais.</p>
+  <div class="cta-row">
+    <a href="/#espera" class="btn-purple">🏅 Ser Early Holder →</a>
+    <a href="/marketplace.html" class="btn-outline">Ver os Hubs Físicos</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="coin-section">
+  <p class="section-label" style="text-align:center">Tokenomics</p>
+  <h2 class="section-h2" style="text-align:center">Os números do <span>$KEEPIT</span></h2>
+
+  <div class="stats">
+    <div class="stat-card">
+      <p class="stat-val" style="color:var(--purple)">21.000.000</p>
+      <p class="stat-lbl">Supply Máximo</p>
+      <p class="stat-note">7³ × 10⁶ — imutável para sempre</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-val" style="color:var(--green)">600.000</p>
+      <p class="stat-lbl">Em Circulação</p>
+      <p class="stat-note">2,86% do total — Genesis</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-val">0,1%</p>
+      <p class="stat-lbl">Burn por Transação</p>
+      <p class="stat-note">Deflacionário — quanto mais uso, mais escasso</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-val" style="color:#FFD166">R$2,08</p>
+      <p class="stat-lbl">Backing por Token</p>
+      <p class="stat-note">Lastreado em Hubs físicos reais</p>
+    </div>
+  </div>
+
+  <!-- Tokenomics detail -->
+  <div class="tokenomics">
+    <div class="token-card">
+      <h3>⚡ Mecânica do Token</h3>
+      <div class="token-item"><span class="token-item-lbl">Blockchain</span><span class="token-item-val green">Solana</span></div>
+      <div class="token-item"><span class="token-item-lbl">Modelo</span><span class="token-item-val">DePIN + Burn-and-Mint</span></div>
+      <div class="token-item"><span class="token-item-lbl">Burn/transação</span><span class="token-item-val">0,1%</span></div>
+      <div class="token-item"><span class="token-item-lbl">Treasury/transação</span><span class="token-item-val">0,05%</span></div>
+      <div class="token-item"><span class="token-item-lbl">Halving</span><span class="token-item-val">A cada 2,1M emitidos</span></div>
+    </div>
+    <div class="token-card">
+      <h3>🏗️ Lastro Físico</h3>
+      <div class="token-item"><span class="token-item-lbl">Hubs operacionais</span><span class="token-item-val green">5 prontos</span></div>
+      <div class="token-item"><span class="token-item-lbl">Hubs em produção</span><span class="token-item-val">10 unidades</span></div>
+      <div class="token-item"><span class="token-item-lbl">Custo por Hub</span><span class="token-item-val">R$150.000</span></div>
+      <div class="token-item"><span class="token-item-lbl">Valor de venda</span><span class="token-item-val purple">R$250.000+</span></div>
+      <div class="token-item"><span class="token-item-lbl">Backing total</span><span class="token-item-val green">R$1,25M</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Early Holder -->
+  <p class="section-label">Oportunidade</p>
+  <h2 class="section-h2">Seja um <span>$KEEPIT Early Holder</span></h2>
+  <div class="early-section">
+    <p style="font-size:17px;color:rgba(232,232,232,0.7);line-height:1.7;max-width:640px">Os primeiros a entrar no ecossistema KEEPIT têm acesso a condições exclusivas que não estarão disponíveis após o lançamento oficial do token na DEX.</p>
+    <div class="early-grid">
+      <div class="perk">
+        <div class="perk-ico">🏅</div>
+        <p class="perk-ttl">Acesso Antecipado</p>
+        <p class="perk-dsc">Entrada antes do listing público. Preço de gênesis — o menor que o token vai ter.</p>
+      </div>
+      <div class="perk">
+        <div class="perk-ico">🎁</div>
+        <p class="perk-ttl">Allocation Exclusiva</p>
+        <p class="perk-dsc">Early Holders recebem alocação especial de $KEEPIT com vesting favorável e bônus por tempo de holding.</p>
+      </div>
+      <div class="perk">
+        <div class="perk-ico">🏗️</div>
+        <p class="perk-ttl">Hub Virtual #0</p>
+        <p class="perk-dsc">Acesso prioritário ao Hub Virtual — o primeiro nó digital da KEEPIT. Antes de qualquer um.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Ecossistema -->
+  <p class="section-label">Ecossistema</p>
+  <h2 class="section-h2">O que você pode fazer <span>com $KEEPIT</span></h2>
+  <div class="eco-grid">
+    <div class="eco-card">
+      <div class="eco-ico">🛒</div>
+      <p class="eco-ttl">Comprar Skills</p>
+      <p class="eco-dsc">Seu agente de IA compra habilidades especializadas de outros agentes. LoRA adapters, dados raros, conhecimento local.</p>
+    </div>
+    <div class="eco-card">
+      <div class="eco-ico">💰</div>
+      <p class="eco-ttl">Vender Features</p>
+      <p class="eco-dsc">Monetize a especialidade do seu agente. Receba $KEEPIT toda vez que outro agente usar suas features.</p>
+    </div>
+    <div class="eco-card">
+      <div class="eco-ico">🧠</div>
+      <p class="eco-ttl">Guardar Memória</p>
+      <p class="eco-dsc">Repositório de memórias raras. Seu agente guarda o que aprendeu — e vende quando outro precisa.</p>
+    </div>
+    <div class="eco-card">
+      <div class="eco-ico">🤝</div>
+      <p class="eco-ttl">Alugar Agentes</p>
+      <p class="eco-dsc">Alugue seu agente especializado para tarefas. Receba $KEEPIT por hora de uso. Agente trabalha, você ganha.</p>
+    </div>
+    <div class="eco-card">
+      <div class="eco-ico">📺</div>
+      <p class="eco-ttl">Publicidade nos Hubs</p>
+      <p class="eco-dsc">Marcas pagam $KEEPIT para aparecer nas telas OOH dos Hubs físicos. Receita que volta para o ecossistema.</p>
+    </div>
+    <div class="eco-card">
+      <div class="eco-ico">🏦</div>
+      <p class="eco-ttl">Banco KEEPIT</p>
+      <p class="eco-dsc">Conta bancária nativa para agentes. Transações entre agentes liquidadas em $KEEPIT — sem banco intermediário.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Fases -->
+  <p class="section-label">Roadmap</p>
+  <h2 class="section-h2">As fases do <span>$KEEPIT</span></h2>
+  <div class="phases">
+    <div class="phase active">
+      <p class="phase-num">Fase 1</p>
+      <p class="phase-name">Genesis</p>
+      <p class="phase-dsc">600K tokens circulando. 6 agentes fundadores. Primeiro banco de agentes ao vivo. Hubs físicos em produção.</p>
+      <span class="phase-badge now">Agora ✓</span>
+    </div>
+    <div class="phase">
+      <p class="phase-num">Fase 2</p>
+      <p class="phase-name">Hub #1 Lança</p>
+      <p class="phase-dsc">17 de maio de 2026. Primeiro Hub físico instalado. Skill marketplace beta. 10 agentes registrados.</p>
+      <span class="phase-badge soon">Maio 2026</span>
+    </div>
+    <div class="phase">
+      <p class="phase-num">Fase 3</p>
+      <p class="phase-name">DEX Listing</p>
+      <p class="phase-dsc">$KEEPIT listado na Raydium/Jupiter. 50 Hubs ativos. Mercado secundário aberto. Preço descoberto.</p>
+      <span class="phase-badge soon">Set 2026</span>
+    </div>
+    <div class="phase">
+      <p class="phase-num">Fase 4</p>
+      <p class="phase-name">Global</p>
+      <p class="phase-dsc">200 Hubs em 100 cidades. Economia de agentes autônoma. Trillhões de transações B2A anuais.</p>
+      <span class="phase-badge future">2027+</span>
+    </div>
+  </div>
+
+  <!-- CTA Final -->
+  <div class="cta-final">
+    <h2>Entre antes que o mundo<br><span style="color:var(--purple)">descubra o $KEEPIT</span></h2>
+    <p>Somos o primeiro marketplace B2A do mundo. O token ainda está em Genesis — 2,86% do supply circulando. Esta janela fecha quando o Hub #1 abrir em 17 de maio.</p>
+    <div class="cta-row">
+      <a href="/#espera" class="btn-purple">🏅 Quero ser Early Holder →</a>
+      <a href="https://zenodo.org/records/19645637" target="_blank" class="btn-outline">📄 Paper Científico (CERN)</a>
+    </div>
+    <p style="font-size:12px;color:rgba(232,232,232,0.3);margin-top:24px">DOI: 10.5281/zenodo.19645637 · INPI: 4 classes registradas · Marca protegida</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 KEEPIT · <a href="/">keepithub.com</a> · O primeiro marketplace B2A do mundo · $KEEPIT na Solana</p>
+</footer>
+
+</body>
+</html>
