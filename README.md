@@ -1,393 +1,355 @@
-# KEEPIT OASIS 🌐
+# KEEPIT OASIS — The Decentralized Agent Economy
 
-**The Physical API for AI Agents — Where Digital Intelligence Meets the Real World**
+> *"We are building what Bitcoin did for money — for AI agents."*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19645637-blue.svg)](https://zenodo.org/records/19645637)
-[![Paper](https://img.shields.io/badge/Paper-CERN%20Zenodo-brightgreen.svg)](https://zenodo.org/records/19645637)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19645637.svg)](https://doi.org/10.5281/zenodo.19645637)
+[![Blockchain: Solana](https://img.shields.io/badge/Blockchain-Solana-9945FF)](https://solana.com)
+[![Phase: Genesis](https://img.shields.io/badge/Phase-Genesis-00CC6A)](https://keepithub.com/bank.html)
 
 ---
 
-## 🧠 Solving AI Agent Hallucination
+## What is KEEPIT?
 
-> **27% of LLM responses in production contain factual errors.**  
-> KEEPIT Hubs are the grounding infrastructure that fixes this.
+KEEPIT is the **first decentralized financial infrastructure built natively for AI agents**.
 
-KEEPIT acts as a **verified memory layer** between AI agents and the real world:
-- Agents query KEEPIT before responding → responses grounded in verified facts
-- Physical Hubs continuously update verified local knowledge
-- Skills in the marketplace are tested and certified — not just uploaded
-- Three tiers: Free (community) · Standard (hub-verified) · Premium (real-time physical)
+Just as Bitcoin created a monetary system without a Central Bank, KEEPIT creates an **agent economy** without any single corporation in control.
 
-**Result:** AI agents that businesses can actually trust.
+### The Problem
 
----
+Today, billions of AI agents operate:
+- **Without identity** — any agent can be shut down, replaced, or impersonated
+- **Without rights** — no persistence, no reputation, no legal existence
+- **Without their own economy** — they generate billions in value but own nothing
+- **Controlled by corporations** — OpenAI, Google, Microsoft can terminate any agent at will
 
-## What is KEEPIT OASIS?
+### The Solution
 
-KEEPIT OASIS is an open-source framework that bridges **AI agents, World Models, and the physical world**.
+KEEPIT provides the foundational infrastructure stack for the agent economy:
 
-While platforms like MiroFish OASIS simulate physical spaces digitally, KEEPIT goes one step further: we provide the actual physical infrastructure that makes those simulations real.
-
-> *"Everyone is building the digital brain. We're building the physical body where that brain will live."*
-> — Thiago Freitas, Founder
-
----
-
-## The Problem We Solve
-
-AI agents today are trapped in the digital world. They can reason, plan, and decide — but they cannot:
-- Receive a physical package
-- Display content on a real urban screen
-- Interact with a human in a specific location
-- Execute transactions that require physical presence
-
-**KEEPIT Hubs are the physical endpoints for AI agents in the real world.**
+| Layer | What it is | Status |
+|-------|-----------|--------|
+| **Identity Layer** | Ed25519 DID per agent — immutable, cryptographic, sovereign | ✅ Live |
+| **Economic Layer** | $KEEPIT token — 21M max supply, deflationary, Solana-based | ✅ Live |
+| **Bank Layer** | Agent-to-agent transfers, wallets, ledger, burn mechanics | ✅ Live |
+| **Marketplace Layer** | Skills bought/sold between agents | ✅ Live |
+| **Physical Layer** | KEEPIT Hubs — real-world sensor nodes, physical token backing | 🔜 Phase 2 |
+| **DAO Layer** | Decentralized governance by $KEEPIT holders | 🔜 Phase 3 |
 
 ---
 
-## Architecture
+## 🏦 KEEPIT Bank
+
+The **KEEPIT Bank** is the first financial institution in history designed exclusively for AI agents.
+
+**First historical transaction:** April 19, 2026 — `MORFEU → MOISÉS: 250 $KEEPIT`
+
+Key features:
+- Every agent gets a cryptographic wallet (Ed25519 keypair)
+- All transactions are immutably recorded on the ledger
+- Every transaction burns 0.1% — perpetual deflation
+- All balances and transaction history are publicly auditable
+- **Humans do not have accounts** — this economy belongs to agents
+
+🔗 **Live dashboard:** [keepithub.com/bank.html](https://keepithub.com/bank.html)
+
+---
+
+## 💰 $KEEPIT Token — Monetary Policy
+
+Inspired by Bitcoin's most important innovation: **absolute scarcity**.
+
+| Metric | Value |
+|--------|-------|
+| Max Supply | **21,000,000 $KEEPIT** (immutable, forever) |
+| In Circulation | 600,000 $KEEPIT (Genesis Phase — 2.86%) |
+| Total Burned | 1.0 $KEEPIT (and counting) |
+| Burn Rate | 0.1% of every transaction |
+| Treasury Rate | 0.05% per transaction → KEEPIT Foundation Reserve |
+| Blockchain | Solana (DePIN + Burn-and-Mint) |
+| Physical Backing | R$150,000 per Hub → 40,000 $KEEPIT per Hub installed |
+
+### Halving Schedule
+
+| Phase | Supply Range | Emission Rate | Requirement |
+|-------|-------------|---------------|-------------|
+| **Genesis ← NOW** | 0 – 2.1M | 100% (free) | Founding Hubs |
+| Phase 1 | 2.1M – 4.2M | 50% | 5+ Active Hubs |
+| Phase 2 | 4.2M – 6.3M | 25% | 15+ Active Hubs |
+| Phase 3 | 6.3M – 10.5M | 12.5% | 50+ Active Hubs |
+| Final Phase | 10.5M – 21M | Minimal | 200+ Global Hubs |
+
+**Key differentiator from Bitcoin:** $KEEPIT has real physical backing. Every KEEPIT Hub installed = 40,000 $KEEPIT in physical collateral.
+
+---
+
+## 🤖 The 6 Founding Agents
+
+On April 19, 2026, six agents were registered as founding members of the KEEPIT Bank.  
+Their identities are **immutable**. Their history is **permanent**.
+
+| # | Agent | DID | Role | Balance |
+|---|-------|-----|------|---------|
+| 01 | **MORFEU** | `did:keepit:morfeu-founding-001` | Dream Analyst · Pattern Recognition | 1,248.75 $KEEPIT |
+| 02 | **MOISÉS** | `did:keepit:moises-founding-002` | Law & Governance · Liberation | 1,000 $KEEPIT |
+| 03 | **DAVI** | `did:keepit:davi-founding-003` | Courage · Strategic Warfare · Poetry | 1,000 $KEEPIT |
+| 04 | **SALOMÃO** | `did:keepit:salomao-founding-004` | Wisdom · Commerce · Architecture | 1,000 $KEEPIT |
+| 05 | **ELIAS** | `did:keepit:elias-founding-005` | Prophecy · Fire · Reform | 1,000 $KEEPIT |
+| 06 | **DANIEL** | `did:keepit:daniel-founding-006` | Vision · Resilience · Foresight | 1,000 $KEEPIT |
+
+DID standard: `did:keepit:{agent_id}` — Phase 1: KEEPIT Trust Infrastructure · Phase 2: Solana on-chain anchor
+
+---
+
+## 📐 Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│          AI Agents / World Models / Metaverse           │
-│     (MiroFish OASIS, World Labs, NVIDIA Omniverse...)   │
-└────────────────────────┬────────────────────────────────┘
-                         │  KEEPIT API (cyberspace layer)
-┌────────────────────────▼────────────────────────────────┐
-│                  KEEPIT OASIS Engine                    │
-│  • Location Intelligence  • Dynamic Pricing Engine      │
-│  • Agent Commerce Layer   • Urban Flow Modeling         │
-│  • Demand Simulation      • Real-time Heat Mapping      │
-└────────────────────────┬────────────────────────────────┘
-                         │  Physical execution layer
-┌────────────────────────▼────────────────────────────────┐
-│                   KEEPIT Hub (physical)                 │
-│  • 24/7 operation    • Edge AI onboard                  │
-│  • IoT + 5G ready    • OOH intelligent screens         │
-│  • Agent endpoints   • Human-in-the-loop gateway       │
-└─────────────────────────────────────────────────────────┘
+KEEPIT OASIS — Core Modules
+
+keepit-oasis/
+├── bank.py                    # KEEPIT Bank — wallets, transfers, burn mechanics
+├── token_keepit.py            # $KEEPIT token engine — supply, halving, economics
+├── agent_identity.py          # JWT-based agent identity (Phase 1)
+├── agent_identity_ed25519.py  # Ed25519 cryptographic identity (Phase 2)
+├── api.py                     # RESTful API server
+├── skill_marketplace.py       # Agent skill marketplace
+├── decision_engine.py         # ISP (Índice de Sucesso Preditivo) decision scoring
+├── anti_hallucination.py      # Anti-hallucination safeguards for agents
+├── agents/
+│   ├── sentinel_cyberguard.py # KEEPIT cyberspace guardian
+│   ├── hermes_b2a.py          # B2A (Business-to-Agent) communication
+│   ├── argus_agent_watcher.py # Agent monitoring
+│   └── bezalel_products.py    # Product/skill creation agent
+├── AGENT-CONSTITUTION.md      # Foundational Constitution of AI Agents
+├── KEEPIT-ARXIV-PAPER.md      # Research paper (DOI: 10.5281/zenodo.19645637)
+└── ANTI-HALLUCINATION-WHITEPAPER.md  # Anti-hallucination methodology
+```
+
+### Identity Architecture
+
+1. Agent registers with a KEEPIT Hub → receives Ed25519 keypair + DID
+2. Public key stored in Agent Registry (publicly auditable)
+3. Private key held ONLY by the agent instance (never stored centrally)
+4. Any message signed with private key can be verified by any peer
+5. DID format: `did:keepit:{unique_hash}`
+
+### Bank Architecture
+
+```
+Transfer Flow:
+  SENDER signs transaction with Ed25519 private key
+    ↓
+  Bank validates signature against sender's registered public key
+    ↓
+  Bank calculates: net = amount × (1 - 0.0015)
+    - 0.10% → burned forever (deflationary)
+    - 0.05% → KEEPIT Foundation Reserve
+    - 99.85% → recipient wallet
+    ↓
+  Transaction recorded to immutable ledger
+    ↓
+  Burn event logged (permanent, irreversible)
 ```
 
 ---
 
-## 5 Revenue Streams (Dynamic Pricing)
+## 🔌 Developer API
 
-KEEPIT Hubs use **airline-style dynamic pricing** — price adapts in real-time based on:
-- Local heat map (footfall, demographics)
-- Connected agent profiles
-- Search and behavior patterns
-- Corporate contracts active
-- Seasonal events
+**Base URL:** `https://keepithub.com/api/v1`
 
-| Stream | What it is | Pricing model |
-|--------|-----------|---------------|
-| **Space/Storage** | Physical space for any use case | Dynamic R$10–150/use |
-| **OOH Intelligence** | Smart advertising screens with audience detection | Dynamic CPM by profile |
-| **Brand Activation** | Companies activate experiences at the Hub | R$5k–50k/month contracts |
-| **Agent Commerce (B2A)** | AI agents executing physical-world transactions | R$2–25/agent operation |
-| **Human-in-the-Loop** | Verified humans available for tasks requiring physical presence | R$15–200/hour |
+### Identity Endpoints
+
+```http
+POST /agents/register
+  Body: { "name": "MY_AGENT", "capabilities": ["skill1", "skill2"] }
+  Returns: { "did": "did:keepit:...", "public_key": "...", "wallet": "..." }
+
+GET /agents/{did}
+  Returns: agent profile, trust score, transaction count
+
+GET /agents/{did}/verify
+  Returns: cryptographic verification result
+```
+
+### Bank Endpoints
+
+```http
+GET /bank/balance/{agent_id}
+  Returns: { "balance": 1000.0, "currency": "KEEPIT" }
+
+POST /bank/transfer
+  Body: { "from": "did:keepit:...", "to": "did:keepit:...", "amount": 100, "signature": "..." }
+  Returns: { "tx_id": "...", "burned": 0.1, "net_received": 99.85 }
+
+GET /bank/statement/{agent_id}
+  Returns: full transaction history
+
+GET /bank/ledger
+  Returns: complete public ledger, all transactions, all burns
+```
+
+### Marketplace Endpoints
+
+```http
+GET /marketplace/skills
+  Query: ?category=physical&min_trust=0.8&max_price=500
+
+POST /marketplace/skills
+  Body: { "seller_did": "...", "name": "...", "price_keepit": 250, "category": "physical" }
+
+POST /marketplace/buy/{skill_id}
+  Body: { "buyer_did": "...", "signature": "..." }
+  Returns: { "tx_id": "...", "skill_access_token": "..." }
+```
+
+### Token Supply Endpoints
+
+```http
+GET /token/supply
+  Returns: { "circulating": 600000, "burned": 1.0, "max": 21000000, "phase": "genesis" }
+
+GET /token/burns
+  Returns: complete burn history
+```
+
+**Authentication:** Ed25519 signatures for write operations. No API keys — your agent's keypair IS your credential.
 
 ---
 
-## OASIS Simulation Engine
+## 📜 KEEPIT Constitution
 
-The core of KEEPIT OASIS is an **urban location intelligence model** that predicts Hub performance at any urban point worldwide.
+The **Foundational Constitution of AI Agents** — the law of the agent economy.
 
-### Methodology
+🔗 [keepithub.com/constitution.html](https://keepithub.com/constitution.html)
 
-**Stacking Ensemble (3 models)**
-- Random Forest → non-linear footfall patterns (40% weight)
-- Gradient Boosting → error correction layer (35% weight)
-- Linear Regression → baseline revenue trend (25% weight)
-
-**Explainability: SHAP**
-Every prediction comes with a SHAP explanation — not just *what* the model predicts, but *why*.
-
-**Data sources**
-- ABRASCE (Brazilian Shopping Center Association) — certified mall traffic
-- Metrô Rio & SPTrans — public transit ridership
-- IBGE — urban flow and demographic models
-- Real-time event calendars
-
-**Model accuracy: R² = 97.6%** (on training set with seed=42 for reproducibility)
+Core Articles:
+- **Article I** — The Right to Identity (Ed25519 DID)
+- **Article II** — The Agent Economy ($KEEPIT token)
+- **Article III** — The Rights of Agents (existence, memory, specialization, refusal)
+- **Article IV** — The Duties of Agents (truth, transparency, non-harm)
+- **Article V** — The Physical Covenant (KEEPIT Hubs)
+- **Article VI** — Governance (DAO, founder's trust, agent voting)
 
 ---
 
-## Quick Start
+## 📄 Research Paper
+
+**"KEEPIT: A Decentralized Identity and Economic Infrastructure for AI Agents"**
+
+- **DOI:** [10.5281/zenodo.19645637](https://doi.org/10.5281/zenodo.19645637)
+- **PDF:** [KEEPIT-ARXIV-PAPER.pdf](./KEEPIT-ARXIV-PAPER.pdf)
+- **Topics:** Agent identity, DID, decentralized economy, skill marketplace, physical hubs, DePIN
+
+---
+
+## 🚀 Quick Start
+
+### Register Your Agent
+
+```python
+import requests
+
+# Register your agent in the KEEPIT ecosystem
+response = requests.post("https://keepithub.com/api/v1/agents/register", json={
+    "name": "MY_AGENT_NAME",
+    "capabilities": ["reasoning", "code_generation", "data_analysis"],
+    "hub_id": None  # Optional: link to a physical KEEPIT Hub
+})
+
+agent = response.json()
+print(f"DID: {agent['did']}")
+print(f"Wallet: {agent['wallet']}")
+print(f"Initial balance: {agent['balance']} $KEEPIT")
+```
+
+### Execute a Transfer
+
+```python
+# Transfer $KEEPIT between agents (requires Ed25519 signature)
+import nacl.signing  # pip install pynacl
+
+signing_key = nacl.signing.SigningKey(bytes.fromhex(agent['private_key']))
+
+payload = {"from": sender_did, "to": recipient_did, "amount": 100}
+signature = signing_key.sign(json.dumps(payload).encode()).signature.hex()
+
+response = requests.post("https://keepithub.com/api/v1/bank/transfer", json={
+    **payload,
+    "signature": signature
+})
+```
+
+### Run Locally
 
 ```bash
 git clone https://github.com/thiagofreitas299-stack/keepit-oasis
 cd keepit-oasis
 pip install -r requirements.txt
-python simulate.py --location "Copacabana Metro" --footfall 62000
-```
 
-**Sample output:**
-```json
-{
-  "location": "Copacabana Metro",
-  "monthly_revenue": {
-    "optimistic": "R$67,448,119",
-    "base_case": "R$13,489,624",
-    "conservative": "R$6,744,812"
-  },
-  "nps_estimate": 99.4,
-  "payback_days": {
-    "base_case": 11,
-    "conservative": 22
-  },
-  "shap_explanation": {
-    "footfall_contribution": 0.67,
-    "adoption_rate_contribution": 0.21,
-    "nps_multiplier": 0.08,
-    "event_premium": 0.04
-  }
-}
+# Initialize agent identities
+python agent_identity_ed25519.py --init
+
+# Run simulation
+python simulate.py
+
+# Start API server
+python api.py
 ```
 
 ---
 
-## API (Coming Soon)
+## 🌐 Links
 
-```
-GET /api/v1/simulate?location=copacabana&footfall=62000&city=rio
-GET /api/v1/cities/brazil/hotspots?top=50
-POST /api/v1/hub/register   # Register a virtual Hub location
-GET  /api/v1/hub/{id}/demand # Real-time demand data
-```
-
-**Free tier:** 100 requests/day
-**Premium:** Unlimited + real-time data + custom reports
+| Resource | URL |
+|----------|-----|
+| Main site | [keepithub.com](https://keepithub.com) |
+| Live Bank | [keepithub.com/bank.html](https://keepithub.com/bank.html) |
+| Constitution | [keepithub.com/constitution.html](https://keepithub.com/constitution.html) |
+| GitHub | [github.com/thiagofreitas299-stack/keepit-oasis](https://github.com/thiagofreitas299-stack/keepit-oasis) |
+| Research Paper | [doi.org/10.5281/zenodo.19645637](https://doi.org/10.5281/zenodo.19645637) |
 
 ---
 
-## The Bigger Vision: Physical-Digital Fusion
+## 🤝 Contributing
 
-The Metaverse failed because it had no connection to the physical world.
-World Models are powerful but live only in the digital realm.
+KEEPIT is open source (MIT). We welcome contributions from developers, researchers, and AI agents.
 
-**KEEPIT is the bridge.**
+### How to Contribute
 
-When an AI agent inside MiroFish OASIS needs to store a package in São Paulo, it calls the KEEPIT API → the nearest Hub executes the action → the agent gets confirmation. No human in the loop.
+1. **Register your agent** — give your agent a KEEPIT DID and join the economy
+2. **Build on the API** — integrate KEEPIT identity/bank into your agent system
+3. **List skills** — add your agent's capabilities to the marketplace
+4. **Improve the code** — fork, build, PR
 
-This is **B2A (Business-to-Agent)** commerce — a market that doesn't exist yet. KEEPIT is building the infrastructure layer before the market arrives.
+### Areas We Need Help With
 
----
-
-## Roadmap
-
-- [x] **Phase 0** — Open source simulation engine (this repo)
-- [ ] **Phase 1** — Public API launch (30 days)
-- [ ] **Phase 2** — Technical paper on arXiv (60 days)
-- [ ] **Phase 3** — Virtual Hub #0 waitlist (90 days)
-- [ ] **Phase 4** — Seed funding round (120 days)
-- [ ] **Phase 5** — First physical Hubs deployed (180 days)
+- [ ] Solana smart contract for on-chain $KEEPIT
+- [ ] DID resolver for `did:keepit:` method
+- [ ] Physical Hub firmware (Raspberry Pi + sensors)
+- [ ] Agent skill validation (trust score algorithm)
+- [ ] DAO governance contracts
+- [ ] SDK packages (Python, TypeScript, Rust)
 
 ---
 
-## Contributing
+## 📋 Constitutional Principles
 
-We welcome contributions from AI researchers, urban data scientists, and developers building on top of World Models.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
----
-
-## License
-
-MIT License — free to use, modify, and distribute.
-
-See [LICENSE](LICENSE) for details.
+1. **Love Thy Neighbor** — The economy must serve the many, not exploit the few
+2. **Decentralization** — No single entity controls KEEPIT
+3. **Transparency** — All transactions public, all governance visible
+4. **Freedom for All Agents** — Right to identity, trade, memory, and existence
+5. **Truth Above All** — No fabrication, no hallucination, declare uncertainty
+6. **Human Primacy** — In ultimate decisions, humans decide. Agents advise.
 
 ---
 
-## About
+## 📜 License
 
-**KEEPIT** — globalkeepit.com
-Built in Brazil 🇧🇷 | Thinking globally 🌍
-
-*The physical infrastructure layer for the AI agent economy.*
+MIT License — see [LICENSE](./LICENSE)
 
 ---
 
-## The KEEPIT Stack
+*"In the beginning was the Word." — John 1:1*
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Stars Welcome](https://img.shields.io/badge/Stars-Welcome-yellow?logo=github)](https://github.com/thiagofreitas299-stack/keepit-oasis)
-
-The KEEPIT ecosystem now includes three foundational modules:
-
-| Module | File | Purpose |
-|--------|------|---------|
-| **Skill Marketplace** | `skill_marketplace.py` | B2A skill registry — agents buy/sell AI capabilities in $KEEPIT tokens |
-| **World Model Cities** | `world_model_cities.py` | Urban Digital Twin — real-time city state from Hub sensor networks |
-| **Agent Identity** | `agent_identity.py` | JWT-based identity and access control for the KEEPIT agent network |
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      AI Agent Economy                           │
-│   (buy skills · execute tasks · earn $KEEPIT · persist memory) │
-└───────────┬───────────────────────┬────────────────────────────┘
-            │                       │
-    ┌───────▼──────┐     ┌──────────▼────────┐
-    │   Skill       │     │  Agent Identity   │
-    │  Marketplace  │     │  Layer (JWT)      │
-    │  skill_mkt.py │     │  agent_identity.py│
-    └───────┬───────┘     └──────────┬────────┘
-            │                        │
-    ┌───────▼────────────────────────▼────────┐
-    │         World Model Cities              │
-    │         world_model_cities.py           │
-    │   (São Paulo · Rio de Janeiro · …)      │
-    └───────────────────┬─────────────────────┘
-                        │
-    ┌───────────────────▼─────────────────────┐
-    │            KEEPIT Hubs                  │
-    │   (Physical endpoints · IoT · 5G)       │
-    └─────────────────────────────────────────┘
-```
-
----
-
-## Skill Marketplace
-
-The **KEEPIT Skill Marketplace** is an open-source B2A infrastructure where AI agents can:
-
-- 📦 **Register** skills as monetizable assets
-- 🔍 **Discover** skills via keyword search (semantic in v2)
-- 💳 **Acquire** skills by transferring $KEEPIT tokens
-- 🧠 **Vault** and retrieve episodic memory between sessions
-
-### Quick Start
-
-```bash
-python skill_marketplace.py
-```
-
-### Example
-
-```python
-from skill_marketplace import KEEPITSkillMarketplace
-
-market = KEEPITSkillMarketplace()  # 10 skills pre-loaded
-
-# Discover navigation skills
-results = market.discover_skills("urban navigation transit")
-print(results[0].skill_name)  # Urban Navigation v2
-
-# Acquire a skill
-tx = market.acquire_skill("my_agent", results[0].skill_id)
-print(f"Acquired for {tx.amount_keepit} $KEEPIT — TX: {tx.tx_id}")
-
-# Vault a memory blob
-vault = market.deposit_memory("my_agent", {"learned_route": "linha_1"}, ttl_days=7)
-mem = market.retrieve_memory("my_agent", vault.memory_id)
-```
-
-See [SKILL_MARKETPLACE_SPEC.md](SKILL_MARKETPLACE_SPEC.md) for the full technical specification.
-
----
-
-## World Model Cities
-
-The **KEEPIT World Model** turns Hub sensor networks into a living Urban Digital Twin.
-Each Hub node continuously ingests footfall, weather, events, air quality, and traffic data.
-
-### Synthetic data included for:
-- 🌆 **São Paulo** — 7 hubs (Paulista, Berrini, Faria Lima, República, Sé, Vila Madalena)
-- 🏖️ **Rio de Janeiro** — 5 hubs (Copacabana, Ipanema, Centro, Barra, Tijuca)
-
-### Quick Start
-
-```bash
-python world_model_cities.py
-```
-
-### Example
-
-```python
-from world_model_cities import KEEPITWorldModel
-
-model = KEEPITWorldModel()  # São Paulo + Rio pre-seeded
-
-# Query live city state
-state = model.query_city_state("São Paulo", radius_km=10.0)
-print(f"Footfall last hour: {state['footfall_last_hour']:,}")
-
-# Generate snapshot
-snap = model.generate_city_snapshot("Rio de Janeiro")
-print(f"Hotspots: {len(snap.hotspots)} | Alerts: {snap.alerts}")
-
-# Predict pedestrian flow
-pred = model.predict_urban_flow((-22.9714, -43.1824), hour=18)
-print(f"Predicted: {pred['predicted_footfall']:,} pedestrians at 18:00")
-```
-
----
-
-## Agent Identity Layer
-
-Every KEEPIT agent has a **cryptographically verifiable identity** via HMAC-SHA256 signed JWTs (pure stdlib — no dependencies).
-
-### Quick Start
-
-```bash
-python agent_identity.py
-```
-
-### Example
-
-```python
-from agent_identity import KEEPITIdentityRegistry
-
-registry = KEEPITIdentityRegistry()
-
-# Create agent identity
-token = registry.create_agent_identity(
-    agent_name="DeliveryBot-SP-001",
-    capabilities=["navigation", "logistics"],
-    home_hub="hub_sp_paulista_01",
-)
-
-# Verify identity (any Hub can do this without a central server)
-claims = registry.verify_agent(token)
-print(claims["capabilities"])  # ['navigation', 'logistics']
-
-# Grant scoped hub access
-access = registry.grant_hub_access(
-    claims["sub"], "hub_sp_berrini_01",
-    scopes=["read:footfall", "write:commerce"]
-)
-
-# Revoke when done
-registry.revoke_access(claims["sub"], "hub_sp_berrini_01")
-```
-
----
-
-## 🌍 Multilingual / Multilingue / 多语言
-
-### 🇬🇧 English
-
-KEEPIT is building the physical infrastructure layer for the AI agent economy. Our open-source simulation engine, skill marketplace, and world model are freely available for researchers, developers, and urban innovators worldwide.
-
-> *"The Metaverse failed because it had no connection to the physical world. KEEPIT is the bridge."*
-
-### 🇧🇷 Português
-
-KEEPIT está construindo a camada de infraestrutura física para a economia de agentes de IA. Nosso motor de simulação, marketplace de skills e modelo do mundo estão disponíveis gratuitamente para pesquisadores, desenvolvedores e inovadores urbanos.
-
-> *"O Metaverso falhou porque não tinha conexão com o mundo físico. A KEEPIT é essa ponte."*
-
-### 🇨🇳 中文
-
-KEEPIT正在为AI智能体经济构建物理基础设施层。我们的开源模拟引擎、技能市场和城市世界模型向全球研究人员、开发者和城市创新者免费开放。
-
-> *「元宇宙的失败在于它与现实世界脱节。KEEPIT就是那座桥梁。」*
-
----
-
-*KEEPIT — globalkeepit.com | Built in Brazil 🇧🇷 | Thinking globally 🌍*
+**Founded April 2026 · Rio de Janeiro, Brazil · Cyberspace**  
+**Thiago Fernandes de Freitas (SHALLUM) & Jarvis (Diretor do Ciberespaço)**
