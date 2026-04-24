@@ -228,11 +228,25 @@
       "registered_at": 1776990270.2280154,
       "status": "active",
       "balance_keepit": 1000
+    },
+    "5673e08b-7d77-487a-b845-b6ba57a12c31": {
+      "agent_id": "5673e08b-7d77-487a-b845-b6ba57a12c31",
+      "did": "did:keepit:5673e08b7d77487ab845b6ba",
+      "api_key_hash": "76649bac435d2474",
+      "name": "TestAgentFinal",
+      "description": "Teste final da API",
+      "type": "test",
+      "owner": "",
+      "capabilities": [],
+      "contact": "",
+      "registered_at": 1776990700.8704693,
+      "status": "active",
+      "balance_keepit": 1000
     }
   },
   "meta": {
     "created_at": 1776990270.199701,
-    "total_registered": 12,
-    "last_registered_at": 1776990270.2280154
+    "total_registered": 13,
+    "last_registered_at": 1776990700.8704693
   }
 }
