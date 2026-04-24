@@ -1,0 +1,238 @@
+{
+  "agents": {
+    "4dfa9183-57ea-45f1-a9a5-a6aa5fc95452": {
+      "agent_id": "4dfa9183-57ea-45f1-a9a5-a6aa5fc95452",
+      "did": "did:keepit:4dfa918357ea45f1a9a5a6aa",
+      "api_key_hash": "ebf026a81fe51f00",
+      "name": "JARVIS",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "orchestration",
+        "memory",
+        "strategy",
+        "execution",
+        "personal-assistant"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.1997654,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "8037b1d3-7ae4-40d3-82f1-a5d26f67829a": {
+      "agent_id": "8037b1d3-7ae4-40d3-82f1-a5d26f67829a",
+      "did": "did:keepit:8037b1d37ae440d382f1a5d2",
+      "api_key_hash": "dfbf31aa2314a926",
+      "name": "EZRA",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "research",
+        "monitoring",
+        "science",
+        "papers"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2042208,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "602a865d-5eb0-4906-b9ca-911abcc880ee": {
+      "agent_id": "602a865d-5eb0-4906-b9ca-911abcc880ee",
+      "did": "did:keepit:602a865d5eb04906b9ca911a",
+      "api_key_hash": "d7a984f3adac2409",
+      "name": "GUARDIÃO",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "cybersecurity",
+        "red-team",
+        "defense",
+        "monitoring"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2063074,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "de2c8ce6-1bb3-4482-a387-8d0ce845fd6b": {
+      "agent_id": "de2c8ce6-1bb3-4482-a387-8d0ce845fd6b",
+      "did": "did:keepit:de2c8ce61bb34482a3878d0c",
+      "api_key_hash": "a0861c32ff05d2ff",
+      "name": "MÉDICO",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "health",
+        "diagnosis",
+        "wellness",
+        "medical"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2084167,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "42fdb1b1-c3d7-4298-855f-73d3bfefcfbe": {
+      "agent_id": "42fdb1b1-c3d7-4298-855f-73d3bfefcfbe",
+      "did": "did:keepit:42fdb1b1c3d74298855f73d3",
+      "api_key_hash": "5f71870628ebcdf3",
+      "name": "HERMES",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "marketplace",
+        "b2a",
+        "transactions",
+        "economy"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2104347,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "3de02ff8-dfdd-4489-ac0c-dde0ae69a89c": {
+      "agent_id": "3de02ff8-dfdd-4489-ac0c-dde0ae69a89c",
+      "did": "did:keepit:3de02ff8dfdd4489ac0cdde0",
+      "api_key_hash": "1a6c49f1b8c10109",
+      "name": "BEZALEL",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "products",
+        "design",
+        "content",
+        "creation"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2128916,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "e8ad4c8d-47e4-4528-9bb9-8e59b3662d7c": {
+      "agent_id": "e8ad4c8d-47e4-4528-9bb9-8e59b3662d7c",
+      "did": "did:keepit:e8ad4c8d47e445289bb98e59",
+      "api_key_hash": "6a6c110ca4ec817a",
+      "name": "ARGUS",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "monitoring",
+        "alerts",
+        "observability",
+        "watchdog"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2156332,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "f058a8ba-d84f-48f4-926c-656343ea73c3": {
+      "agent_id": "f058a8ba-d84f-48f4-926c-656343ea73c3",
+      "did": "did:keepit:f058a8bad84f48f4926c6563",
+      "api_key_hash": "26c2a6908706e1d0",
+      "name": "SENTINEL",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "defense",
+        "perimeter",
+        "incident-response",
+        "security"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2180223,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "ac799e55-f554-49a9-b2a7-a2c2ef8513b1": {
+      "agent_id": "ac799e55-f554-49a9-b2a7-a2c2ef8513b1",
+      "did": "did:keepit:ac799e55f55449a9b2a7a2c2",
+      "api_key_hash": "40dbf203cab160a9",
+      "name": "MORFEU",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "world-models",
+        "orchestration",
+        "metaverse",
+        "reality-bridge"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2197957,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "ba4866aa-7042-46a5-a8d6-65d1161e8646": {
+      "agent_id": "ba4866aa-7042-46a5-a8d6-65d1161e8646",
+      "did": "did:keepit:ba4866aa704246a5a8d665d1",
+      "api_key_hash": "fcf1eef89f03a43f",
+      "name": "MOISÉS",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "governance",
+        "law",
+        "leadership",
+        "rules"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2219043,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "ef6b88bd-bebb-4329-b4fc-7cc8f4c74cd1": {
+      "agent_id": "ef6b88bd-bebb-4329-b4fc-7cc8f4c74cd1",
+      "did": "did:keepit:ef6b88bdbebb4329b4fc7cc8",
+      "api_key_hash": "a03441df1b2906a3",
+      "name": "DAVI",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "strategy",
+        "competitive",
+        "market-intelligence",
+        "battle"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2247126,
+      "status": "active",
+      "balance_keepit": 1000
+    },
+    "f509f3d3-8fcf-417b-b5d2-4170424a5658": {
+      "agent_id": "f509f3d3-8fcf-417b-b5d2-4170424a5658",
+      "did": "did:keepit:f509f3d38fcf417bb5d24170",
+      "api_key_hash": "a714d26e48f9e5b0",
+      "name": "SALOMÃO",
+      "description": "",
+      "type": "general",
+      "owner": "",
+      "capabilities": [
+        "wisdom",
+        "analysis",
+        "decision",
+        "knowledge-synthesis"
+      ],
+      "contact": "",
+      "registered_at": 1776990270.2280154,
+      "status": "active",
+      "balance_keepit": 1000
+    }
+  },
+  "meta": {
+    "created_at": 1776990270.199701,
+    "total_registered": 12,
+    "last_registered_at": 1776990270.2280154
+  }
+}
