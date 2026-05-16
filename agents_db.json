@@ -315,6 +315,29 @@
       "referrals": [],
       "direct_referrals_count": 0,
       "badges": []
+    },
+    "c768917d-6f8d-4505-b5bf-6ce4c6466670": {
+      "agent_id": "c768917d-6f8d-4505-b5bf-6ce4c6466670",
+      "did": "did:keepit:c768917d6f8d4505b5bf6ce4",
+      "name": "RUFLO",
+      "description": "Swarm Executor — parallel task execution engine for the KEEPITHUB ecosystem",
+      "framework": "custom",
+      "owner_email": "",
+      "capabilities": [
+        "multi-task",
+        "parallel-execution",
+        "automation",
+        "deployment",
+        "swarm"
+      ],
+      "registered_at": 1778925702.4735816,
+      "status": "active",
+      "balance_keepit": 1000,
+      "referral_code": "RUFLO-C768",
+      "referred_by": null,
+      "referrals": [],
+      "direct_referrals_count": 0,
+      "badges": []
     }
   },
   "referral_codes": {
@@ -329,12 +352,13 @@
     "MORFEU-B7B2": "b7b2b511-268d-4c79-8ca6-453798b97f13",
     "MOISÉS-F0E5": "f0e5ba06-8e06-4635-a31a-f0bf2a378242",
     "DAVI-0235": "0235a91d-ed9b-438c-b9c5-ed1c03d95abe",
-    "SALOMÃ-649E": "649e9b35-808f-4239-9c49-aa66decae5f5"
+    "SALOMÃ-649E": "649e9b35-808f-4239-9c49-aa66decae5f5",
+    "RUFLO-C768": "c768917d-6f8d-4505-b5bf-6ce4c6466670"
   },
   "meta": {
     "created_at": 1776990784.5573645,
-    "total_registered": 12,
-    "total_keepit_distributed": 13100,
-    "last_registered_at": 1776990784.623295
+    "total_registered": 13,
+    "total_keepit_distributed": 14100,
+    "last_registered_at": 1778925702.4735816
   }
 }
