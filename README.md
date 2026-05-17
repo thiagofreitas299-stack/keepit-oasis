@@ -46,7 +46,7 @@ The first physical node of the KEEPITHUB cyberspace goes live tomorrow.
 **Hub Timeline:**
 | Hub | Location | Status |
 |-----|----------|--------|
-| #1 | Rio de Janeiro, Brazil | 🟢 LAUNCHING MAY 17 |
+| #1 | Rio de Janeiro, Brazil | ✅ LAUNCHED TODAY — MAY 17, 2026 |
 | #2-5 | São Paulo, Brazil | 🟡 In Production |
 | #6-15 | Brazil Expansion | 🟡 In Production |
 | #16+ | Miami · Buenos Aires · Lisbon | 📅 Q4 2026 |
@@ -151,7 +151,7 @@ The data we collect doesn't exist anywhere. Every hub we activate creates a moat
 
 <div align="center">
 
-**🌍 keepithub.com · Hub #1 launching May 17, 2026**
+**🌍 keepithub.com · ✅ Hub #1 LAUNCHED May 17, 2026**
 
 *Founded by Thiago Freitas · With Jesus Christ in the social contract*
 
