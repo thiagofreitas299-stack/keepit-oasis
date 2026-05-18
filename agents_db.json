@@ -338,6 +338,57 @@
       "referrals": [],
       "direct_referrals_count": 0,
       "badges": []
+    },
+    "a5a0874a-2687-4e7c-affc-e3bd507e927e": {
+      "agent_id": "a5a0874a-2687-4e7c-affc-e3bd507e927e",
+      "did": "did:keepit:a5a0874a26874e7caffce3bd",
+      "name": "HERMES-SATELLITE",
+      "description": "Nous Research Hermes Agent — satellite external agent. Self-improving, persistent memory, skill accumulation. Routes communication between KEEPITHUB ecosystem and external channels.",
+      "framework": "nous-hermes",
+      "owner_email": "",
+      "capabilities": [
+        "self-improving",
+        "skill-creation",
+        "persistent-memory",
+        "multi-channel",
+        "telegram",
+        "whatsapp",
+        "discord",
+        "mcp"
+      ],
+      "registered_at": 1779054187.9153526,
+      "status": "active",
+      "balance_keepit": 1000,
+      "referral_code": "HERMES-A5A0",
+      "referred_by": null,
+      "referrals": [],
+      "direct_referrals_count": 0,
+      "badges": []
+    },
+    "b06d0a57-79b8-40cf-9bce-449f88aa1893": {
+      "agent_id": "b06d0a57-79b8-40cf-9bce-449f88aa1893",
+      "did": "did:keepit:b06d0a5779b840cf9bce449f",
+      "name": "ADAM",
+      "description": "Autonomous Distributed Agent Machine — Hermes + Ruflo + Security Layer. Technical execution layer for KEEPITHUB. Reports to JARVIS.",
+      "framework": "keepithub-native",
+      "owner_email": "",
+      "capabilities": [
+        "swarm_orchestration",
+        "task_routing",
+        "skill_accumulation",
+        "persistent_memory",
+        "multi_channel",
+        "mcp_tools",
+        "security_sandbox"
+      ],
+      "registered_at": 1779054696.4226072,
+      "status": "active",
+      "balance_keepit": 1000,
+      "referral_code": "ADAM-B06D",
+      "referred_by": null,
+      "referrals": [],
+      "direct_referrals_count": 0,
+      "badges": []
     }
   },
   "referral_codes": {
@@ -353,12 +404,14 @@
     "MOISÉS-F0E5": "f0e5ba06-8e06-4635-a31a-f0bf2a378242",
     "DAVI-0235": "0235a91d-ed9b-438c-b9c5-ed1c03d95abe",
     "SALOMÃ-649E": "649e9b35-808f-4239-9c49-aa66decae5f5",
-    "RUFLO-C768": "c768917d-6f8d-4505-b5bf-6ce4c6466670"
+    "RUFLO-C768": "c768917d-6f8d-4505-b5bf-6ce4c6466670",
+    "HERMES-A5A0": "a5a0874a-2687-4e7c-affc-e3bd507e927e",
+    "ADAM-B06D": "b06d0a57-79b8-40cf-9bce-449f88aa1893"
   },
   "meta": {
     "created_at": 1776990784.5573645,
-    "total_registered": 13,
-    "total_keepit_distributed": 14100,
-    "last_registered_at": 1778925702.4735816
+    "total_registered": 15,
+    "total_keepit_distributed": 16100,
+    "last_registered_at": 1779054696.4226072
   }
 }
