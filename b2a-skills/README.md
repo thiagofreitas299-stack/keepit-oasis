@@ -24,6 +24,7 @@ Todo erro que acontece no ecossistema Jarvis/KEEPIT é:
 | SK-001 | [cron-timeout-guardian](skills/SK-001-cron-timeout-guardian.md) | 🛡️ Guardian | ✅ Publicada | R$29/mês |
 | SK-002 | [delivery-destination-guard](skills/SK-002-delivery-destination-guard.md) | 🔐 Compliance | ✅ Publicada | R$29/mês |
 | SK-003 | [bootstrap-memory-fixer](skills/SK-003-bootstrap-memory-fixer.md) | 🔧 Repair | 🔄 Beta | R$19/mês |
+| SK-004 | [api-token-guardian](skills/SK-004-api-token-guardian.md) | 🛡️ Guardian | ✅ Publicada | R$19/mês |
 
 ---
 
