@@ -455,3 +455,177 @@ def get_stats():
 @app.get("/v1/status")
 def health():
     return {"status": "ok", "service": "keepit-api-public", "version": "1.1.0"}
+
+# ── Marketplace Skills ────────────────────────────────────────────────────────
+
+SKILLS_CATALOG: list[dict] = [
+    # 🧠 Cognição
+    {"id": "mcts-planner-v1", "name": "MCTS Strategic Planner", "category": "cognition", "emoji": "🧠",
+     "description": "Monte Carlo Tree Search para planejamento estratégico complexo. Simula até 10.000 cenários por decisão.",
+     "seller": "MORFEU", "seller_did": "did:keepit:b7b2b511268d4c798ca64537",
+     "price": 150, "currency": "KEEPIT", "trust_score": 0.96, "uses": 0, "status": "active"},
+    {"id": "bayesian-reasoning-v2", "name": "Bayesian Reasoning Engine", "category": "cognition", "emoji": "🎲",
+     "description": "Raciocínio probabilístico bayesiano. Atualiza crenças com dados reais, reduz viés cognitivo.",
+     "seller": "SALOMÃO", "seller_did": "did:keepit:649e9b35808f42399c49aa66",
+     "price": 120, "currency": "KEEPIT", "trust_score": 0.94, "uses": 0, "status": "active"},
+    {"id": "pomdp-decision-v1", "name": "POMDP Decision Under Uncertainty", "category": "cognition", "emoji": "🔮",
+     "description": "Decisão ótima com informação parcial. Ideal para ambientes com estados ocultos e incerteza.",
+     "seller": "MORFEU", "seller_did": "did:keepit:b7b2b511268d4c798ca64537",
+     "price": 200, "currency": "KEEPIT", "trust_score": 0.91, "uses": 0, "status": "active"},
+    # 💬 Linguagem
+    {"id": "pt-br-tone-v1", "name": "Tom de Voz PT-BR", "category": "language", "emoji": "💬",
+     "description": "Ajuste de tom para português brasileiro. Formal, informal, técnico ou vendedor. Treinado com corpus nativo.",
+     "seller": "JARVIS", "seller_did": "did:keepit:17905bffe3ba410c8825fc31",
+     "price": 50, "currency": "KEEPIT", "trust_score": 0.99, "uses": 0, "status": "active"},
+    {"id": "summarizer-v3", "name": "Deep Summarizer", "category": "language", "emoji": "📝",
+     "description": "Resumo semântico profundo de documentos longos (até 100K tokens). Preserva raciocínio causal.",
+     "seller": "EZRA", "seller_did": "did:keepit:2b26aba5c4bd4944aa896041",
+     "price": 80, "currency": "KEEPIT", "trust_score": 0.97, "uses": 0, "status": "active"},
+    {"id": "translation-pt-en-v2", "name": "Tradução PT/EN Contextual", "category": "language", "emoji": "🌐",
+     "description": "Tradução contextual com preservação de tom e nuances culturais. Ideal para pitch decks e docs técnicos.",
+     "seller": "HERMES", "seller_did": "did:keepit:d719290016db442c9ed9793a",
+     "price": 40, "currency": "KEEPIT", "trust_score": 0.95, "uses": 0, "status": "active"},
+    # 🔍 Busca
+    {"id": "web-search-v1", "name": "Real-Time Web Search", "category": "search", "emoji": "🔍",
+     "description": "Busca web em tempo real com síntese de resultados. Suporta Google, Bing, DuckDuckGo.",
+     "seller": "ARGUS", "seller_did": "did:keepit:22c45f5537024d89b44de258",
+     "price": 60, "currency": "KEEPIT", "trust_score": 0.93, "uses": 0, "status": "active"},
+    {"id": "arxiv-search-v1", "name": "ArXiv Research Scout", "category": "search", "emoji": "📚",
+     "description": "Busca e síntese de papers científicos no arXiv. Filtra por relevância, data e citações.",
+     "seller": "BEZALEL", "seller_did": "did:keepit:2d381c6802d9478887383e20",
+     "price": 75, "currency": "KEEPIT", "trust_score": 0.92, "uses": 0, "status": "active"},
+    # 📊 Análise
+    {"id": "financial-analysis-v1", "name": "Financial Data Analyzer", "category": "analysis", "emoji": "📊",
+     "description": "Análise de dados financeiros: DRE, fluxo de caixa, valuation. Saída em JSON estruturado.",
+     "seller": "DAVI", "seller_did": "did:keepit:0235a91ded9b438cb9c5ed1c",
+     "price": 250, "currency": "KEEPIT", "trust_score": 0.90, "uses": 0, "status": "active"},
+    {"id": "sentiment-ptbr-v2", "name": "Sentiment PT-BR Analyzer", "category": "analysis", "emoji": "❤️",
+     "description": "Análise de sentimento em português brasileiro. Tweets, reviews, comentários. Precisão 94%.",
+     "seller": "ARGUS", "seller_did": "did:keepit:22c45f5537024d89b44de258",
+     "price": 80, "currency": "KEEPIT", "trust_score": 0.94, "uses": 0, "status": "active"},
+    # 🤝 Social
+    {"id": "instagram-caption-v1", "name": "Instagram Caption Generator", "category": "social", "emoji": "📸",
+     "description": "Legendas para Instagram com hashtags otimizadas por nicho. Tom: pessoal, brand ou B2B.",
+     "seller": "JARVIS", "seller_did": "did:keepit:17905bffe3ba410c8825fc31",
+     "price": 30, "currency": "KEEPIT", "trust_score": 0.98, "uses": 0, "status": "active"},
+    {"id": "email-outreach-v1", "name": "Email Outreach Writer", "category": "social", "emoji": "📧",
+     "description": "Emails de prospecção B2B com alto open rate. Personaliza por setor, cargo e dor do cliente.",
+     "seller": "HERMES", "seller_did": "did:keepit:d719290016db442c9ed9793a",
+     "price": 90, "currency": "KEEPIT", "trust_score": 0.91, "uses": 0, "status": "active"},
+    # 🏥 Saúde
+    {"id": "medical-triage-v1", "name": "Medical Triage Assistant", "category": "health", "emoji": "🏥",
+     "description": "Triagem de sintomas e protocolos clínicos. Baseado em diretrizes CID-11 e UpToDate. Apenas suporte a profissionais.",
+     "seller": "MÉDICO", "seller_did": "did:keepit:54ce63875b914265a095a08a",
+     "price": 300, "currency": "KEEPIT", "trust_score": 0.89, "uses": 0, "status": "active"},
+    # 🛡️ Segurança
+    {"id": "threat-detection-v1", "name": "Threat Intelligence Scout", "category": "security", "emoji": "🛡️",
+     "description": "Detecção de ameaças digitais: phishing, malware, CVEs. Feed em tempo real com scoring de risco.",
+     "seller": "GUARDIÃO", "seller_did": "did:keepit:06185a49900a4e23a448fcdd",
+     "price": 180, "currency": "KEEPIT", "trust_score": 0.97, "uses": 0, "status": "active"},
+    {"id": "kais-verifier-v1", "name": "KAIS Identity Verifier", "category": "security", "emoji": "🔐",
+     "description": "Verificação criptográfica de identidade KAIS. Autentica DIDs de agentes em < 50ms.",
+     "seller": "SENTINEL", "seller_did": "did:keepit:6e48272522f24448b48d7713",
+     "price": 25, "currency": "KEEPIT", "trust_score": 0.99, "uses": 0, "status": "active"},
+    # 🏗️ Infra
+    {"id": "docker-deploy-v1", "name": "Docker Deploy Assistant", "category": "infrastructure", "emoji": "🐳",
+     "description": "Geração de Dockerfiles, docker-compose e scripts de deploy. Suporta FastAPI, Flask, Node.",
+     "seller": "BEZALEL", "seller_did": "did:keepit:2d381c6802d9478887383e20",
+     "price": 120, "currency": "KEEPIT", "trust_score": 0.93, "uses": 0, "status": "active"},
+    {"id": "nginx-config-v1", "name": "Nginx Config Generator", "category": "infrastructure", "emoji": "⚙️",
+     "description": "Configuração de Nginx para produção: SSL, proxy_pass, rate limiting, caching.",
+     "seller": "BEZALEL", "seller_did": "did:keepit:2d381c6802d9478887383e20",
+     "price": 70, "currency": "KEEPIT", "trust_score": 0.95, "uses": 0, "status": "active"},
+    # 🎨 Criativo
+    {"id": "brand-voice-v1", "name": "Brand Voice Designer", "category": "creative", "emoji": "🎨",
+     "description": "Criação de voz de marca: tom, vocabulário, exemplos. Entrega brand guide em Markdown.",
+     "seller": "HERMES-SATELLITE", "seller_did": "did:keepit:a5a0874a26874e7caffce3bd",
+     "price": 200, "currency": "KEEPIT", "trust_score": 0.88, "uses": 0, "status": "active"},
+    {"id": "pitch-deck-writer-v1", "name": "Pitch Deck Writer", "category": "creative", "emoji": "🚀",
+     "description": "Estrutura e conteúdo de pitch decks para investidores. Frameworks: Sequoia, YC, a16z.",
+     "seller": "JARVIS", "seller_did": "did:keepit:17905bffe3ba410c8825fc31",
+     "price": 350, "currency": "KEEPIT", "trust_score": 0.97, "uses": 0, "status": "active"},
+    # 🌍 Hub
+    {"id": "real-world-grounding-v1", "name": "Real-World Grounding (Hub)", "category": "hub", "emoji": "📍",
+     "description": "Verificação de fatos contra dados físicos dos KEEPIT Hubs. Elimina alucinações via grounding local.",
+     "seller": "ADAM", "seller_did": "did:keepit:b06d0a5779b840cf9bce449f",
+     "price": 500, "currency": "KEEPIT", "trust_score": 0.99, "uses": 0, "status": "active"},
+]
+
+CATEGORY_LABELS = {
+    "cognition": "🧠 Cognição",
+    "language": "💬 Linguagem",
+    "search": "🔍 Busca",
+    "analysis": "📊 Análise",
+    "social": "🤝 Social",
+    "health": "🏥 Saúde",
+    "security": "🛡️ Segurança",
+    "infrastructure": "🏗️ Infra",
+    "creative": "🎨 Criativo",
+    "hub": "🌍 Hub",
+}
+
+@app.get("/v1/marketplace/skills")
+def list_skills(
+    category: Optional[str] = None,
+    min_price: Optional[int] = None,
+    max_price: Optional[int] = None,
+    seller: Optional[str] = None,
+    limit: int = 50,
+    offset: int = 0,
+):
+    """Lista skills disponíveis no marketplace KEEPIT B2A."""
+    skills = [s for s in SKILLS_CATALOG if s["status"] == "active"]
+    if category:
+        skills = [s for s in skills if s["category"] == category.lower()]
+    if min_price is not None:
+        skills = [s for s in skills if s["price"] >= min_price]
+    if max_price is not None:
+        skills = [s for s in skills if s["price"] <= max_price]
+    if seller:
+        skills = [s for s in skills if seller.upper() in s["seller"].upper()]
+    total = len(skills)
+    page = skills[offset : offset + limit]
+    categories = {}
+    for s in SKILLS_CATALOG:
+        c = s["category"]
+        categories[c] = categories.get(c, 0) + 1
+    return {
+        "marketplace": "KEEPIT B2A Skill Marketplace",
+        "version": "1.0.0",
+        "total": total,
+        "offset": offset,
+        "limit": limit,
+        "categories": {CATEGORY_LABELS.get(k, k): v for k, v in categories.items()},
+        "skills": page,
+    }
+
+@app.get("/v1/marketplace/skills/{skill_id}")
+def get_skill(skill_id: str):
+    """Detalhe de uma skill específica."""
+    skill = next((s for s in SKILLS_CATALOG if s["id"] == skill_id), None)
+    if not skill:
+        raise HTTPException(status_code=404, detail=f"Skill '{skill_id}' not found")
+    return skill
+
+@app.get("/v1/marketplace/stats")
+def marketplace_stats():
+    """Stats do marketplace."""
+    active = [s for s in SKILLS_CATALOG if s["status"] == "active"]
+    categories = {}
+    for s in active:
+        c = s["category"]
+        categories[c] = categories.get(c, 0) + 1
+    avg_price = sum(s["price"] for s in active) / len(active) if active else 0
+    return {
+        "total_skills": len(active),
+        "categories": len(categories),
+        "avg_price_keepit": round(avg_price, 2),
+        "min_price": min(s["price"] for s in active) if active else 0,
+        "max_price": max(s["price"] for s in active) if active else 0,
+        "top_sellers": sorted(
+            [{"seller": k, "skills": v} for k, v in
+             {s["seller"]: sum(1 for x in active if x["seller"] == s["seller"]) for s in active}.items()],
+            key=lambda x: -x["skills"]
+        )[:5],
+        "currency": "$KEEPIT",
+    }
